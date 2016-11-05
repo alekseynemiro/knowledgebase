@@ -2,7 +2,7 @@
 
 This is a small example of working with **Google Drive**.
 
-![Preview](preview.jpg)
+![Preview](preview.png)
 
 ## Target
 

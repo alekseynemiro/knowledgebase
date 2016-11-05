@@ -3,7 +3,7 @@
 This is a sample application for **CodeProject**.
 This application allows you to view messages of the **CodeProject** forums.
 
-![CodeProject application](preview.png)
+![CodeProject application](preview.jpg)
 
 ## Target
 

@@ -3,7 +3,7 @@
 The small example application for **Facebook**. 
 The application receives and displays likes of the user.
 
-![Preview](preview.jpg)
+![Preview](preview.png)
 
 ## Target
 

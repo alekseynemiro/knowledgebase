@@ -2,7 +2,7 @@
 
 This is a small example of working with **Yandex.Disk**.
 
-![Preview](preview.jpg)
+![Preview](preview.png)
 
 ## Target
 
