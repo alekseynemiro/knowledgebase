@@ -1,0 +1,7 @@
+obj
+bin
+.vs
+*.suo
+UpgradeLog.XML
+_UpgradeReport_Files
+packages
