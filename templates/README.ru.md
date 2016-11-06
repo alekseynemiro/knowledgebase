@@ -15,8 +15,8 @@ http://kbyte.ru
 
 ## Ключевые слова
 
-CSharp, C#, Windows Forms, Console, ASP.NET, Database
-Visual Basic .NET, VB.NET, Windows Forms, Console, ASP.NET, Database
+CSharp, C#, Windows Forms, Console, ASP.NET, WebForms, ASP.NET WebForms, ASP.NET MVC, Database
+Visual Basic .NET, VB.NET, Windows Forms, Console, ASP.NET, WebForms, ASP.NET WebForms, ASP.NET MVC, Database
 JavaScript, TypeScript, jQuery, React, Redux, Angular, SCSS, Bootstrap
 
 ## Выпуск
