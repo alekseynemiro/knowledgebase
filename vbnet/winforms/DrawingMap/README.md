@@ -13,7 +13,7 @@ http://kbyte.ru/ru/Forums/Show.aspx?id=17609
 
 ## Tags 
 
-VB.NET, Visual Basic .NET, Windows Forms, Graphic, GDI+, System.Drawing
+VB.NET, Visual Basic .NET, Windows Forms, Graphics, GDI+, System.Drawing
 
 ## Release
 

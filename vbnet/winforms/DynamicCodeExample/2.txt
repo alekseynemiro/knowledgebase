@@ -1,0 +1,7 @@
+﻿Public Class Example
+
+  Public Sub Run(frm As DynamicCodeExample.Form1)
+    frm.Kbyte()
+  End Sub
+
+End Class

@@ -5,3 +5,4 @@ bin
 UpgradeLog.XML
 _UpgradeReport_Files
 packages
+*.user
