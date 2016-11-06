@@ -1,0 +1,20 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "XmlDocumentSelectNode", "XmlDocumentSelectNode.vbproj", "{A3E8D87A-ED72-4BED-8A2D-51BF44220116}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x86 = Debug|x86
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A3E8D87A-ED72-4BED-8A2D-51BF44220116}.Debug|x86.ActiveCfg = Debug|x86
+		{A3E8D87A-ED72-4BED-8A2D-51BF44220116}.Debug|x86.Build.0 = Debug|x86
+		{A3E8D87A-ED72-4BED-8A2D-51BF44220116}.Release|x86.ActiveCfg = Release|x86
+		{A3E8D87A-ED72-4BED-8A2D-51BF44220116}.Release|x86.Build.0 = Release|x86
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
