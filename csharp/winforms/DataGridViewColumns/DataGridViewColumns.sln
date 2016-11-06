@@ -1,0 +1,20 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataGridViewColumns", "DataGridViewColumns.csproj", "{041A2612-7BBF-42CA-ABFA-3E20CC3FD2C4}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x86 = Debug|x86
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{041A2612-7BBF-42CA-ABFA-3E20CC3FD2C4}.Debug|x86.ActiveCfg = Debug|x86
+		{041A2612-7BBF-42CA-ABFA-3E20CC3FD2C4}.Debug|x86.Build.0 = Debug|x86
+		{041A2612-7BBF-42CA-ABFA-3E20CC3FD2C4}.Release|x86.ActiveCfg = Release|x86
+		{041A2612-7BBF-42CA-ABFA-3E20CC3FD2C4}.Release|x86.Build.0 = Release|x86
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
