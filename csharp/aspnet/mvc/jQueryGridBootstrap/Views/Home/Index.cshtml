@@ -1,0 +1,91 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width" />
+		<title>jQuery Grid Bootstrap</title>
+		<meta charset="utf-8" />
+		<script src="/Scripts/jquery-1.9.1.min.js"></script>
+		<script src="/Scripts/bootstrap.min.js"></script>
+		<script src="/Scripts/grid.min.js"></script>
+		<link href="/Content/bootstrap.min.css" rel="stylesheet" type="text/css" />
+		<link href="/Content/bootstrap-theme.min.css" rel="stylesheet" type="text/css" />
+		<link href="/Content/grid.min.css" rel="stylesheet" type="text/css" />
+	</head>
+	<body>
+		<div class="jumbotron">
+			<div class="container">
+				<h1>jQuery Grid Bootstrap</h1>
+				<p><a href="http://gijgo.com/Grid/Demos/jquery-grid-bootstrap">http://gijgo.com/Grid/Demos/jquery-grid-bootstrap</a></p>
+			</div>
+		</div>
+		<div class="container">
+			<!--div class="row">
+				<div class="col-xs-8">
+					<form class="form-inline">
+						<div class="form-group">
+							<input type="text" class="form-control" id="txtQuery" placeholder="Search...">
+						</div>
+						<button id="btnSearch" type="button" class="btn btn-default">Search</button>
+						<button id="btnClear" type="button" class="btn btn-default">Clear</button>
+					</form>
+				</div>
+				<div class="col-xs-4">
+					<button id="btnAdd" type="button" class="btn btn-default pull-right">Add New Record</button>
+				</div>
+			</div-->
+			<div class="row" style="margin-top: 10px">
+				<div class="col-xs-12">
+					<table id="grid"></table>
+				</div>
+			</div>
+		</div>
+
+		<div id="dialog" class="hidden">
+			<input type="hidden" id="ID" />
+			<form>
+				<div class="form-group">
+					<label for="Name">Name</label>
+					<input type="text" class="form-control" id="Name">
+				</div>
+				<div class="form-group">
+					<label for="PlaceOfBirth">Place Of Birth</label>
+					<input type="text" class="form-control" id="PlaceOfBirth" />
+				</div>
+				<button type="button" id="btnSave" class="btn btn-default">Save</button>
+				<button type="button" id="btnCancel" class="btn btn-default">Cancel</button>
+			</form>
+		</div>
+
+		<script type="text/javascript">
+			$(document).ready(function () {
+				var grid, dialog;
+				grid = $('#grid').grid({
+					dataSource: { url: '/Home/GetAccounts', method: 'POST' },
+					uiLibrary: 'bootstrap',
+					columns: [
+						{ field: 'AccountID', sortable: true },
+						{ field: 'FirstName', sortable: true },
+						{ field: 'LastName', sortable: true },
+						{ field: 'Company', sortable: true },
+						{ field: 'Position', sortable: true },
+						// { title: '', field: 'Edit', width: 34, type: 'icon', icon: 'glyphicon-pencil', tooltip: 'Edit', events: { 'click': Edit } },
+						// { title: '', field: 'Delete', width: 34, type: 'icon', icon: 'glyphicon-remove', tooltip: 'Delete', events: { 'click': Delete } }
+					],
+					pager: { limit: 2, sizes: [2, 5, 10, 20] }
+				});
+				dialog = $('#dialog').dialog({
+					uiLibrary: 'bootstrap',
+					title: 'Add/Edit Record',
+					autoOpen: false,
+					resizable: false,
+					modal: true
+				});
+			});
+		</script>
+	</body>
+</html>
