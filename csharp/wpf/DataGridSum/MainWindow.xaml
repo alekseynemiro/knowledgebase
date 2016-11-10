@@ -1,0 +1,12 @@
+﻿<Window x:Class="DataGridSum.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:DataGridSum"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="350" Width="525" Initialized="Window_Initialized">
+	<Grid>
+		<DataGrid x:Name="dataGrid" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" SelectionChanged="dataGrid_SelectionChanged" />
+	</Grid>
+</Window>
