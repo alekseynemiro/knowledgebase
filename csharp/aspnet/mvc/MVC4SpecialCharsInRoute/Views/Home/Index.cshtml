@@ -1,0 +1,25 @@
+﻿@model MVC4SpecialCharsInRoute.Models.HomeModel
+@{
+	Layout = null;
+}
+<!DOCTYPE html>
+
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width" />
+		<title>Index</title>
+	</head>
+	<body>
+		<div>
+			<h1>@(Model.Id ?? "Index")</h1>
+			<ul>
+				<li>@Html.ActionLink("Index", "Index", "Home", new { id = String.Empty }, null)</li>
+				<li>@Html.ActionLink("123", "Index", "Home", new { id = 123 }, null)</li>
+				<li>@Html.ActionLink("test", "Index", "Home", new { id = "test" }, null)</li>
+				<li>@Html.ActionLink("24.11.2016", "Index", "Home", new { id = "24.11.2016" }, null)</li>
+				<li>@Html.ActionLink("20:20", "Index", "Home", new { id = "20:20" }, null)</li>
+				<li>@Html.ActionLink("24.11.2016-20:20", "Index", "Home", new { id = "24.11.2016-20:20" }, null)</li>
+			</ul>
+		</div>
+	</body>
+</html>
