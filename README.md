@@ -1,12 +1,8 @@
-﻿# Archive of examples for programmers
+﻿# Aleksey Nemiro's knowledge base
 
-Sometimes I answer questions on programming.
-My answers may complemented by code examples.
-This repository contains some of the examples.
+This repository contains short notes on various topics related to programming and the use of various programs and utilities.
 
-As a rule, these are simple examples.
-
-Probably it will be useful to someone, other than humans, for which these examples were made.
+And also this repository contains code examples that I made while answering programming questions on various resources.
 
 ---
 
