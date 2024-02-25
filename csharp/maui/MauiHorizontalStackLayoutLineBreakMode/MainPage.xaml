@@ -1,0 +1,203 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+  xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+  xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+  xmlns:converters="clr-namespace:MauiHorizontalStackLayoutLineBreakMode.Converters"
+  x:Class="MauiHorizontalStackLayoutLineBreakMode.MainPage"
+>
+  <ContentPage.Resources>
+    <ResourceDictionary>
+      <converters:SubtractConverter x:Key="SubtractConverter" />
+      <converters:MultiSubtractConverter x:Key="MultiSubtractConverter" />
+    </ResourceDictionary>
+  </ContentPage.Resources>
+
+  <ScrollView>
+    <VerticalStackLayout
+      Spacing="16"
+      Padding="16"
+    >
+      <!--Problem-->
+      <VerticalStackLayout
+        Padding="16"
+        HorizontalOptions="Start"
+        VerticalOptions="Start"
+        BackgroundColor="Aqua"
+        MaximumWidthRequest="350"
+      >
+        <Label
+          Text="Problem"
+          FontAttributes="Bold"
+          TextColor="Red"
+          Margin="0,0,0,8"
+        />
+        <HorizontalStackLayout
+          BackgroundColor="GreenYellow"
+        >
+          <CheckBox />
+          <Label
+            Text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua"
+            LineBreakMode="WordWrap"
+            VerticalTextAlignment="Center"
+            BackgroundColor="Yellow"
+            PropertyChanged="MaximumWidthRequest_PropertyChanged"
+          />
+        </HorizontalStackLayout>
+      </VerticalStackLayout>
+
+      <!--Solution #1: Grid-->
+      <VerticalStackLayout
+        Padding="16"
+        HorizontalOptions="Start"
+        VerticalOptions="Start"
+        BackgroundColor="Aqua"
+        MaximumWidthRequest="350"
+      >
+        <Label
+          Text="Solution #1: Grid"
+          FontAttributes="Bold"
+          TextColor="Red"
+          Margin="0,0,0,8"
+          IsVisible="False"
+        />
+        <Grid
+          HorizontalOptions="Start"
+          VerticalOptions="Start"
+          BackgroundColor="GreenYellow"
+        >
+          <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto" />
+            <ColumnDefinition Width="*" />
+          </Grid.ColumnDefinitions>
+
+          <CheckBox
+            Grid.Column="0"
+          />
+          <Label
+            Text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua"
+            LineBreakMode="WordWrap"
+            VerticalTextAlignment="Center"
+            BackgroundColor="Yellow"
+            Grid.Column="1"
+          />
+        </Grid>
+      </VerticalStackLayout>
+
+      <!--Alternative solution #1: MaximumWidthRequest-->
+      <VerticalStackLayout
+        x:Name="Container"
+        Padding="16"
+        HorizontalOptions="Start"
+        VerticalOptions="Start"
+        BackgroundColor="Aqua"
+        MaximumWidthRequest="350"
+      >
+        <Label
+          Text="Alternative solution #1: MaximumWidthRequest"
+          FontAttributes="Bold"
+          TextColor="Red"
+          Margin="0,0,0,8"
+        />
+        <HorizontalStackLayout
+          BackgroundColor="GreenYellow"
+        >
+          <CheckBox />
+          <Label
+            Text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua"
+            LineBreakMode="WordWrap"
+            VerticalTextAlignment="Center"
+            BackgroundColor="Yellow"
+            PropertyChanged="MaximumWidthRequest_PropertyChanged"
+            MaximumWidthRequest="{Binding
+              Source={x:Reference Container},
+              Path=Width
+            }"
+          />
+        </HorizontalStackLayout>
+      </VerticalStackLayout>
+
+      <!--Alternative solution #2: MaximumWidthRequest + SubtractConverter-->
+      <VerticalStackLayout
+        x:Name="Container2"
+        Padding="16"
+        HorizontalOptions="Start"
+        VerticalOptions="Start"
+        BackgroundColor="Aqua"
+        MaximumWidthRequest="350"
+      >
+        <Label
+          Text="Alternative solution #2: MaximumWidthRequest + SubtractConverter"
+          FontAttributes="Bold"
+          TextColor="Red"
+          Margin="0,0,0,8"
+        />
+        <HorizontalStackLayout
+          BackgroundColor="GreenYellow"
+        >
+          <CheckBox />
+          <Label
+            Text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua"
+            LineBreakMode="WordWrap"
+            VerticalTextAlignment="Center"
+            BackgroundColor="Yellow"
+            MaximumWidthRequest="{Binding
+              Source={x:Reference Container2},
+              Path=Width,
+              Converter={StaticResource SubtractConverter},
+              ConverterParameter=50
+            }"
+            PropertyChanged="MaximumWidthRequest_PropertyChanged"
+          />
+        </HorizontalStackLayout>
+      </VerticalStackLayout>
+
+      <!--Alternative solution #3: MaximumWidthRequest + MultiSubtractConverter-->
+      <VerticalStackLayout
+        x:Name="Container3"
+        Padding="16"
+        HorizontalOptions="Start"
+        VerticalOptions="Start"
+        BackgroundColor="Aqua"
+        MaximumWidthRequest="350"
+      >
+        <Label
+          Text="Alternative solution #3: MaximumWidthRequest + MultiSubtractConverter"
+          FontAttributes="Bold"
+          TextColor="Red"
+          Margin="0,0,0,8"
+        />
+        <HorizontalStackLayout
+          BackgroundColor="GreenYellow"
+        >
+          <CheckBox
+            x:Name="CheckBox"
+          />
+          <Label
+            Text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua"
+            LineBreakMode="WordWrap"
+            VerticalTextAlignment="Center"
+            BackgroundColor="Yellow"
+            PropertyChanged="MaximumWidthRequest_PropertyChanged"
+          >
+            <Label.MaximumWidthRequest>
+              <MultiBinding Converter="{StaticResource MultiSubtractConverter}">
+                <Binding
+                  Source="{x:Reference Container3}"
+                  Path="Width"
+                />
+                <Binding
+                  Source="{x:Reference Container3}"
+                  Path="Padding.HorizontalThickness"
+                />
+                <Binding
+                  Source="{x:Reference CheckBox}"
+                  Path="Width"
+                />
+              </MultiBinding>
+            </Label.MaximumWidthRequest>
+          </Label>
+        </HorizontalStackLayout>
+      </VerticalStackLayout>
+    </VerticalStackLayout>
+  </ScrollView>
+</ContentPage>
