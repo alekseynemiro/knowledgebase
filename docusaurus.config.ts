@@ -77,6 +77,13 @@ const config: Config = {
     prism: {
       theme: prismThemes.github,
       darkTheme: prismThemes.dracula,
+      additionalLanguages: [
+        'docker',
+        'csharp',
+        'css',
+        'powershell',
+        'scss',
+      ],
     },
   } satisfies Preset.ThemeConfig,
 };
