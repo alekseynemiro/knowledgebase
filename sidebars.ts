@@ -23,7 +23,7 @@ const sidebars: SidebarsConfig = {
       type: 'category',
       label: 'Information technology',
       collapsible: true,
-      collapsed: true,
+      collapsed: false,
       link: {
         type: 'generated-index',
       },
