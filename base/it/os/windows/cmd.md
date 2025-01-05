@@ -45,3 +45,9 @@ ipconfig /displaydns
 ```bash title="Clear cache"
 ipconfig /flushdns
 ```
+
+## How to find all substrings in command output?
+
+```
+dir | findstr git
+```
