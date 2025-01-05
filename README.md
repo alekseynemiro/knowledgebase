@@ -7,6 +7,10 @@ In addition, the "[examples](examples)" folder contains code examples on various
 
 Docusaurus is used as a user interface for the knowledge base.
 
+## Online
+
+<https://alekseynemiro.github.io/knowledgebase/>
+
 ## Local use
 
 The local launch requires [Node.js](https://nodejs.org/) version 18 or higher.
