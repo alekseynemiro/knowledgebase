@@ -35,3 +35,13 @@ mklink LINK_PATH TARGET_PATH
 ```bash title="Example"
 mklink  "C:\Program Files\nodejs" "C:\nvm\v18.16.0" 
 ```
+
+## How to view the current DNS cache?
+
+```bash title="View cache"
+ipconfig /displaydns
+```
+
+```bash title="Clear cache"
+ipconfig /flushdns
+```
