@@ -1,3 +1,10 @@
+---
+tags:
+  - GitHub Emoji
+  - GitHub
+  - Emoji
+---
+
 # GitHub Emoji
 
 :link: [https://api.github.com/emojis](https://api.github.com/emojis)
