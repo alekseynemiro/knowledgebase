@@ -3,7 +3,7 @@ tags:
   - GitHub
 ---
 
-# Resources
+# References
 
 * [GitHub REST API](https://docs.github.com/en/rest)
 * [GitHub Buttons](https://buttons.github.io)
