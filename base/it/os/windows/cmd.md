@@ -51,3 +51,9 @@ ipconfig /flushdns
 ```
 dir | findstr git
 ```
+
+## How to launch the event log?
+
+```bash
+eventvwr
+```
