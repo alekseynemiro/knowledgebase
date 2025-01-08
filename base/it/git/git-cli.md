@@ -1,5 +1,7 @@
 ---
 slug: /git/cli
+title: Git CLI
+description: Git command-line interface
 tags:
   - Git
 ---
