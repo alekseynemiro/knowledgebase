@@ -12,3 +12,4 @@ description: References to useful resources for LLM.
 * [LM Studio](https://lmstudio.ai/) - easy start for offline work with LLMs
 * [GPT4All](https://www.nomic.ai/gpt4all) - easy start for offline use
 * [GPTQ](https://github.com/IST-DASLab/gptq) - custom quantization
+* [Russian GPT3 models](https://github.com/ai-forever/ru-gpts)
