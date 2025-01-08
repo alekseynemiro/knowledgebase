@@ -9,7 +9,7 @@ Docusaurus is used as a user interface for the knowledge base.
 
 ## Online
 
-<https://alekseynemiro.github.io/knowledgebase/>
+<https://kb.nemiro.net/>
 
 ## Local use
 
