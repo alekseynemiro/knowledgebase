@@ -15,7 +15,13 @@ git clone https://github.com/alekseynemiro/knowledgebase.git
 ```
 
 ```bash title="Clone a specific branch"
-git clone -b <branch_name> <repu_url>
+git clone -b <branch_name> <repo_url>
+```
+
+## How to get a list of branches from a remote repository?
+
+```bash
+git fetch --all
 ```
 
 ## How to check the status of the current branch?
