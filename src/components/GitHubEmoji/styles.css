@@ -4,3 +4,7 @@
   align-items: center;
   gap: 0.5rem;
 }
+
+.github-emoji-col img {
+  max-width: 64px;
+}
