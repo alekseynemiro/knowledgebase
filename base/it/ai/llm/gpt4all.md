@@ -23,7 +23,9 @@ GPT4All - private local LLM environment.
 
 ![GPT4All](gpt4all.png)
 
-## Error 0xc0000005
+## Troubleshooting
+
+### Error 0xc0000005
 
 If error `0xc0000005` occurs, you need to do the following:
 
