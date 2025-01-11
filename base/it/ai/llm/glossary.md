@@ -1,6 +1,6 @@
 ---
 title: Glossary
-description: Glossary of terms related to LLM.
+description: Glossary of terms related to LLMs.
 ---
 
 # Glossary

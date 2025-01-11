@@ -1,5 +1,6 @@
 ---
 title: Hugging Face
+description: AI community.
 tags:
   - Hugging Face
   - huggingface.co

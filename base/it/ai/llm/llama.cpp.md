@@ -1,5 +1,6 @@
 ---
 title: llama.cpp
+description: Open source software library for LLMs.
 tags:
   - llama.cpp
   - llama-cli

@@ -1,6 +1,6 @@
 ---
 title: References
-description: References to useful resources for LLM.
+description: References to useful resources for LLMs.
 ---
 
 # References
