@@ -76,7 +76,7 @@ const config: Config = {
     },
     footer: {
       style: 'dark',
-      copyright: `Copyright © 2016-2025 Aleksey Nemiro. Built with Docusaurus.`,
+      copyright: `Created by human for humans and machines.<br />Copyright © 2016-2025 Aleksey Nemiro.<br /><small>Built with Docusaurus on: ${new Date().toISOString()}</small>`,
     },
     prism: {
       theme: prismThemes.github,
