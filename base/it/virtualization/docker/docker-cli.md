@@ -23,19 +23,19 @@ The "Dockerfile" name is used by default.
 By default, the Dockerfile from the current working directory will be used.
 
 ```bash
-docker build
+docker build .
 ```
 
 Set image name:
 
 ```bash
-docker build --tag repo_name:image_name
+docker build . --tag repo_name:image_name
 ```
 
 Set build time variables:
 
 ```bash
-docker build --build-arg ARG_1_NAME=ARG_1_VALUE --build-arg ARG_2_NAME=ARG_2_VALUE
+docker build . --build-arg ARG_1_NAME=ARG_1_VALUE --build-arg ARG_2_NAME=ARG_2_VALUE
 ```
 
 Custom name of Dockerfile:
@@ -50,6 +50,18 @@ Other useful options:
 * `--no-cache` - disable cache;
 * `--rm` -- remove intermediate containers after a successful build;
 * `-q`, `--quiet` - quiet mode, if successful the output will be the image identifier;
+
+## How to display full log when building image?
+
+```bash
+docker build . --progress=plain
+```
+
+## How to disable cache when building an image?
+
+```bash
+docker build . --no-cache
+```
 
 ## How to manage (start/pause/restart/stop) a container?
 
@@ -168,4 +180,30 @@ docker exec -it %CONTAINER_NAME_OR_ID% /bin/bash
 
 ```bash
 docker exec -it %CONTAINER_NAME_OR_ID% /bin/sh
+```
+
+## How to clear resources?
+
+```bash title="Remove unused images, containers, and networks"
+docker system prune
+```
+
+```bash title="Stop and remove ALL, ALL, ALL"
+docker system prune -a
+```
+
+```bash title="Remove only unused images"
+docker image prune
+```
+
+```bash title="Remove only stopped containers"
+docker container prune
+```
+
+```bash title="Remove only unused volumes"
+docker volume prune
+```
+
+```bash title="Remove only unused networks"
+docker network prune
 ```
