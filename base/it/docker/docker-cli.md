@@ -69,7 +69,7 @@ docker build . --no-cache
 ## How to manage (start/pause/restart/stop) a container?
 
 ```bash
-docker run -d --name MY_CONTAINER -p 80:5080 -p 443:5443 -e ASPNETCORE_URLS="http://+:5080;https://+:5443" %IMAGE_ID_OR_NAME%
+docker run -d --name MY_CONTAINER -p 80:5080 -p 443:5443 -e ASPNETCORE_URLS="http://+:5080;https://+:5443" ${IMAGE_ID_OR_NAME}
 ```
 
 * `-d`, `--detach` - background mode;
@@ -80,13 +80,13 @@ docker run -d --name MY_CONTAINER -p 80:5080 -p 443:5443 -e ASPNETCORE_URLS="htt
 To `start`, `pause`, `restart`, and `stop` of the container there are commands with the same name:
 
 ```bash
-docker start %CONTAINER_NAME_OR_ID%
+docker start ${CONTAINER_NAME_OR_ID}
 ```
 
 ## How to view container logs?
 
 ```bash
-docker logs %CONTAINER_NAME_OR_ID%
+docker logs ${CONTAINER_NAME_OR_ID}
 ```
 
 * `--details` - show extra data;
@@ -95,7 +95,7 @@ docker logs %CONTAINER_NAME_OR_ID%
 ## How to remove a container?
 
 ```bash
-docker rm %CONTAINER_NAME_OR_ID%
+docker rm ${CONTAINER_NAME_OR_ID}
 ```
 
 * `-f`, `--force` - stop and remove;
@@ -127,7 +127,7 @@ docker ps --no-trunc
 It is possible to use `grep` to filter the output:
 
 ```bash
-docker ps -a | grep %SEARCH_STRING%
+docker ps -a | grep ${SEARCH_STRING}
 ```
 
 ## How to get a list of images?
@@ -142,47 +142,47 @@ docker image list --all
 ## How to view image history?
 
 ```bash
-docker image history %IMAGE_NAME_OR_ID%
+docker image history ${IMAGE_NAME_OR_ID}
 ```
 
 ## How to remove an image?
 
 ```bash
-docker rmi %image_id%
+docker rmi ${IMAGE_NAME_OR_ID}
 ```
 
 ## How to view the creator of the image?
 
 ```bash
-docker inspect %IMAGE_NAME_OR_ID%
+docker inspect ${IMAGE_NAME_OR_ID}
 ```
 
 ## How to view a container files?
 
 ```bash
-docker create --name="%CONTAINER_NAME_OR_ID%" %IMAGE_NAME_OR_ID%
-docker export %CONTAINER_NAME_OR_ID% | tar -t
-docker rm %CONTAINER_NAME_OR_ID%
+docker create --name="${CONTAINER_NAME_OR_ID}" ${IMAGE_NAME_OR_ID}
+docker export ${CONTAINER_NAME_OR_ID} | tar -t
+docker rm ${CONTAINER_NAME_OR_ID}
 ```
 
 ## How to export a container to a file?
 
 ```bash
-docker export %CONTAINER_NAME_OR_ID% > output.tar
+docker export ${CONTAINER_NAME_OR_ID} > output.tar
 ```
 
 ## How to execute a command in a container?
 
 ```bash
-docker run --name %CONTAINER_NAME_OR_ID% -d -i -t %IMAGE_NAME_OR_ID% /bin/sh
+docker run --name ${CONTAINER_NAME_OR_ID} -d -i -t ${IMAGE_NAME_OR_ID} /bin/sh
 ```
 
 ```bash
-docker exec -it %CONTAINER_NAME_OR_ID% /bin/bash
+docker exec -it ${CONTAINER_NAME_OR_ID} /bin/bash
 ```
 
 ```bash
-docker exec -it %CONTAINER_NAME_OR_ID% /bin/sh
+docker exec -it ${CONTAINER_NAME_OR_ID} /bin/sh
 ```
 
 ## How to clear resources?
