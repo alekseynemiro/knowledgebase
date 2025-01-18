@@ -10,7 +10,7 @@ tags:
   - AI
 ---
 
-# Hugging Face :hugs:
+# :hugs: Hugging Face
 
 An American company that developed the Transformer architecture and actively promotes machine learning to the masses.
 
