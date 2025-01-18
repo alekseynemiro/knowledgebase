@@ -1,9 +1,12 @@
 ---
+title: Links
+description: Links to useful resources on GitHub.
 tags:
   - GitHub
+  - Links
 ---
 
-# References
+# Links
 
 * [GitHub REST API](https://docs.github.com/en/rest)
 * [GitHub Buttons](https://buttons.github.io)
