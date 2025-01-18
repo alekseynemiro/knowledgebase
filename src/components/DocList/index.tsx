@@ -24,7 +24,9 @@ export default function DocList(props: Props): ReactNode {
     );
   }
 
-  const filteredItems = filterDocCardListItems(items);
+  const filteredItems = filterDocCardListItems(items).sort((a, b) => {
+    return (a as any).label.localeCompare((b as any).label);
+  });
 
   return (
     <ul className={clsx(className)}>
