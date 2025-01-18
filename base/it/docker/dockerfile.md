@@ -2,6 +2,9 @@
 tags:
   - Docker
   - Dockerfile
+  - Virtualization
+  - CI/CD
+  - DevOps
 ---
 
 # Dockerfile

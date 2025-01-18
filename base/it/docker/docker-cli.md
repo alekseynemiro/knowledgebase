@@ -2,6 +2,9 @@
 slug: cli
 tags:
   - Docker
+  - Virtualization
+  - CI/CD
+  - DevOps
 ---
 
 # Docker CLI

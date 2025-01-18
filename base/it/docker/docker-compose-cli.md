@@ -2,6 +2,9 @@
 tags:
   - Docker
   - Docker Compose
+  - Virtualization
+  - CI/CD
+  - DevOps
 ---
 
 # Docker Compose CLI
