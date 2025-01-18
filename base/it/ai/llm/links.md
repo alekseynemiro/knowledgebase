@@ -1,9 +1,11 @@
 ---
-title: References
-description: References to useful resources for LLMs.
+title: Links
+description: Links to useful resources for LLMs.
+tags:
+  - Links
 ---
 
-# References
+# Links
 
 * [Hugging Face](https://huggingface.co/) - AI community
 * [Open LLM Leaderboard](https://huggingface.co/spaces/open-llm-leaderboard/open_llm_leaderboard)
