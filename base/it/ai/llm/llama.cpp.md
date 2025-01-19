@@ -28,7 +28,7 @@ The library uses the GGUF (GGML Universal File) binary file format to store tens
 
 3. Find and download the guff files of LLM(s): [https://huggingface.co/models?search=gguf](https://huggingface.co/models?search=gguf).  
    For example, [https://huggingface.co/lmstudio-community/Meta-Llama-3-8B-Instruct-GGUF/tree/main](https://huggingface.co/lmstudio-community/Meta-Llama-3-8B-Instruct-GGUF/tree/main):
-   ![Download files from Hugging Face](huggingface-download.png)
+   ![Download files from Hugging Face](assets/huggingface-download.png)
 
 4. Launch command prompt and run the following command:
 
@@ -46,7 +46,7 @@ The library lets you set up your server with a web interface. It's very easy:
 llama-server -m "C:\models\Codestral-22B-v0.1-Q4_K_M.gguf" --port 8080
 ```
 
-![Hello llama-server!](llama-server.png)
+![Hello llama-server!](assets/llama-server.png)
 
 ### Multiple users
 
@@ -62,4 +62,4 @@ llama-server -m phi-4-Q4_K_M.gguf -c 16384 -np 4 --port 8080
 
 [Download the required files](https://github.com/ggerganov/llama.cpp/releases) and copy them to the **llama.cpp** folder.
 
-![Windows: File cublas64_12.dll not found](llama-cpp-cublas64_12_not-found.png)
+![Windows: File cublas64_12.dll not found](assets/llama-cpp-cublas64_12_not-found.png)

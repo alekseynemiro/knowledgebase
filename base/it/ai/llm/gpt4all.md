@@ -21,7 +21,7 @@ GPT4All - private local LLM environment.
 4. Start new chat => Select model and select LocalDocs.
 5. Enjoy!
 
-![GPT4All](gpt4all.png)
+![GPT4All](assets/gpt4all.png)
 
 ## Troubleshooting
 
