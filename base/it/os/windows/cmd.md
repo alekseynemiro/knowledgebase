@@ -14,11 +14,11 @@ tags:
 
 Just type `cmd` in the address bar of the explorer:
 
-![cmd](cmd.png)
+![cmd](assets/cmd.png)
 
 If you hold down the `Shift` key and right-click anywhere, you will be able to launch PowerShell:
 
-![PowerShell](powershell.png)
+![PowerShell](assets/powershell.png)
 
 ## How to get the hostname of the current machine?
 
