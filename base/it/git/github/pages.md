@@ -18,17 +18,17 @@ tags:
     185.199.111.153
     ```
 
-    ![Example of A record](dns-a-record-example.png)
+    ![Example of A record](assets/dns-a-record-example.png)
 
     * Create `CNAME` record to `username.github.io`.
 
-    ![Example of CNAME record](dns-cname-record-example.png)
+    ![Example of CNAME record](assets/dns-cname-record-example.png)
 
 2. Open repository Settings => Pages
    * Select Branch.
-     ![Select Branch](github-pages-select-branch.png)
+     ![Select Branch](assets/github-pages-select-branch.png)
    * Add `CNAME` to "Custom domain" section and Save.
    * Wait for checking results.
    * Set the "Enforce HTTPS" option when it becomes available.
-     ![Custom Domain](github-pages-custom-domain.png)
+     ![Custom Domain](assets/github-pages-custom-domain.png)
    * If the domain is down for a long time (several hours), try removing it from GitHub and set it again.
