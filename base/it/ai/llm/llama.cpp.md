@@ -4,6 +4,7 @@ description: Open source software library for LLMs.
 tags:
   - llama.cpp
   - llama-cli
+  - llama-server
   - llama
   - LLM
   - Machine Learning
@@ -36,6 +37,24 @@ The library uses the GGUF (GGML Universal File) binary file format to store tens
    ```
 
 5. Enjoy!
+
+## llama-server
+
+The library lets you set up your server with a web interface. It's very easy:
+
+```bash
+llama-server -m "C:\models\Codestral-22B-v0.1-Q4_K_M.gguf" --port 8080
+```
+
+![Hello llama-server!](llama-server.png)
+
+### Multiple users
+
+For example `4` users with `4096 x 4 = 16 384` max context size:
+
+```bash
+llama-server -m phi-4-Q4_K_M.gguf -c 16384 -np 4 --port 8080
+```
 
 ## Troubleshooting
 
