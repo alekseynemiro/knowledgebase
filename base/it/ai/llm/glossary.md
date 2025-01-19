@@ -21,10 +21,12 @@ tags:
 * **Embedding** - vector representations of words, phrases, or sentences that capture their meanings and are used in various natural language processing tasks.
 * **F1 Score** - a metric used to evaluate the performance of a classification model, especially for imbalanced datasets; it is the harmonic mean of precision and recall.
 * **FAISS** (Facebook AI Similarity Search) - an efficient similarity search and clustering library developed by Facebook for finding similar vectors in large datasets.
+* **Fine-Tuning** - the process of adapting a pre-trained language model. See also IFT.
 * **GGUF** (GGML Universal File) - binary file format to store tensors and model metadata for llama.cpp.
 * **GPT** (Generative Pre-trained Transformer) - type of large language model based on the transformer deep learning architecture, pre-trained on large data sets, and able to generate novel human-like content.
 * **HNSW** (Hierarchical Navigable Small World) - a data structure to efficiently perform approximate nearest neighbor searches in high dimensions.
 * **IFT** (Instruction Fine-Tuning) - the process of adapting a pre-trained language model to follow specific instructions or tasks, improving its performance on those tasks.
+* **Inference** - the process of obtaining predictions from a trained model. Simply put, it is communication with the model.
 * **IVF** (Inverted Index, or Inverted File) - a data structure used in information retrieval that allows for efficient searching of documents containing specific words.
 * **IVFPQ** (IVF with Product Quantization) - is a composite index that combines inverted file index (IVF) and product quantization (PQ) for reducing storage and increasing efficiency.
 * **Llama** (Large Language Model Meta AI, aka **LLaMA**) - is a family of autoregressive large language models (LLMs) released by Meta AI starting in February 2023.
