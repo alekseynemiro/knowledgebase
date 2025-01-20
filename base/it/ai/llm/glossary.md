@@ -35,6 +35,7 @@ tags:
 * **NLP** (Natural Language Processing) - a field of artificial intelligence focused on the interaction between computers and humans through natural language, enabling machines to understand, interpret, and generate human languages.
 * **Parameters** - the variables that the model learns during training.
 * **PEFT** (Parameter-Efficient Fine-Tuning) - is a method for adapting pre-trained models with minimal changes to model parameters, making fine-tuning more efficient and less resource-intensive.
+* **Perplexity** - measures how well a language model predicts a text sample. The lower the perplexity value, the better the model reflects the specified text.
 * **Precision** - is a metric that estimates what proportion of all objects that the algorithm classified as positive are actually positive.
 * **Prompt** - represents the stimulus or input provided to the model to generate a response or text.
   Prompt can contain context that will help the model better understand what is being said.
