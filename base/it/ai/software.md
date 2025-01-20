@@ -22,3 +22,4 @@ tags:
 
 * [llama.cpp](https://github.com/ggerganov/llama.cpp) - LLM inference in C/C++
 * [node-llama-cpp](https://github.com/withcatai/node-llama-cpp) - llama.cpp for Node.js
+* [LocalAI](https://localai.io/) - open-source alternative to OpenAI.
