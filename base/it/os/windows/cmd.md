@@ -20,6 +20,12 @@ If you hold down the `Shift` key and right-click anywhere, you will be able to l
 
 ![PowerShell](assets/powershell.png)
 
+## How to set environment variable? (for session only)
+
+```bash
+set VAR_NAME=VALUE
+```
+
 ## How to get the hostname of the current machine?
 
 ```bash
