@@ -69,3 +69,9 @@ eventvwr
 ```bash
 netstat -na | find "8080"
 ```
+
+## How to restart a service?
+
+```bash
+net stop nginx && net start nginx
+```
