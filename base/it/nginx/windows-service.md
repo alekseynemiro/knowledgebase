@@ -14,3 +14,9 @@ tags:
 3. `nssm install nginx`
 4. ![nssm](assets/nssm-nginx.png)
 5. Enjoy!
+
+## Restart service
+
+```bash
+net stop nginx && net start nginx
+```
