@@ -60,6 +60,7 @@ tags:
 
 ## Utilities
 
+* [Non-Sucking Service Manager (NSSM)](https://nssm.cc/)
 * [Process Explorer](https://learn.microsoft.com/en-us/sysinternals/downloads/process-explorer)
 * [Process Monitor](https://learn.microsoft.com/en-us/sysinternals/downloads/procmon)
 * [WinDirStat](https://windirstat.net/)
