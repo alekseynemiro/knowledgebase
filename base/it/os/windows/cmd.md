@@ -63,3 +63,9 @@ dir | findstr git
 ```bash
 eventvwr
 ```
+
+## How to check for a specific port?
+
+```bash
+netstat -na | find "8080"
+```
