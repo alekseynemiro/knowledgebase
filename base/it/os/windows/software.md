@@ -3,6 +3,7 @@ title: Software
 tags:
   - Software
   - Windows
+  - Links
 ---
 
 # Software for Windows
