@@ -5,6 +5,7 @@ tags:
   - Virtualization
   - CI/CD
   - DevOps
+  - FAQ
 ---
 
 # Dockerfile
