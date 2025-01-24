@@ -6,6 +6,7 @@ tags:
   - Windows Command Prompt
   - Windows Command Processor
   - Windows
+  - FAQ
 ---
 
 # Windows Command Prompt
