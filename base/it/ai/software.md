@@ -28,3 +28,7 @@ tags:
 * [Faiss](https://faiss.ai/) - a library for efficient similarity search and clustering of dense vectors
 * [LangChain](https://www.langchain.com/) - LLM framework
 * [Semantic Kernel](https://github.com/microsoft/semantic-kernel) - is an SDK that integrates Large Language Models (LLMs)
+
+## Database Management System (DBMS)
+
+* [Apache Parquet](https://parquet.apache.org/) - is an open source, column-oriented data file format designed for efficient data storage and retrieval
