@@ -1,4 +1,5 @@
 ---
+slug: hardware
 title: Hardware
 description: Notes on hardware for creating and using AI.
 tags:

@@ -1,4 +1,5 @@
 ---
+slug: software
 title: Software
 description: AI and Machine Learning Software.
 tags:
