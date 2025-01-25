@@ -5,6 +5,7 @@ tags:
   - WSL
   - Windows
   - Linux
+  - FAQ
 ---
 
 # WSL (Windows Subsystem for Linux)
