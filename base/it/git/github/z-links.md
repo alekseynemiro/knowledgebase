@@ -1,4 +1,5 @@
 ---
+slug: links
 title: Links
 description: Links to useful resources on GitHub.
 tags:
