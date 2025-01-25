@@ -2,6 +2,7 @@
 tags:
   - GitHub Pages
   - GitHub
+  - Step-by-Step
 ---
 
 # GitHub Pages
