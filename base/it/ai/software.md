@@ -25,3 +25,4 @@ tags:
 * [node-llama-cpp](https://github.com/withcatai/node-llama-cpp) - llama.cpp for Node.js
 * [LocalAI](https://localai.io/) - open-source alternative to OpenAI.
 * [ollama](https://github.com/ollama)
+* [Faiss](https://faiss.ai/) - a library for efficient similarity search and clustering of dense vectors
