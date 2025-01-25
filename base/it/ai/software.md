@@ -26,3 +26,4 @@ tags:
 * [LocalAI](https://localai.io/) - open-source alternative to OpenAI.
 * [ollama](https://github.com/ollama)
 * [Faiss](https://faiss.ai/) - a library for efficient similarity search and clustering of dense vectors
+* [LangChain](https://www.langchain.com/) - LLM framework
