@@ -24,7 +24,7 @@ tags:
 * [llama.cpp](https://github.com/ggerganov/llama.cpp) - LLM inference in C/C++
 * [node-llama-cpp](https://github.com/withcatai/node-llama-cpp) - llama.cpp for Node.js
 * [LocalAI](https://localai.io/) - open-source alternative to OpenAI
-* [ollama](https://github.com/ollama)
+* [ollama](https://github.com/ollama) - CLI and REST API
 * [LangChain](https://www.langchain.com/) - LLM framework
 * [Semantic Kernel](https://github.com/microsoft/semantic-kernel) - is an SDK that integrates Large Language Models (LLMs)
 
