@@ -1,6 +1,6 @@
 ---
 title: Command Arguments
-description: Using command line arguments.
+description: Using command line arguments in Python.
 tags:
   - Python
   - FAQ

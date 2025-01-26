@@ -1,6 +1,6 @@
 ---
 title: Files & Folders
-description: Operations with files and folders.
+description: Operations with files and folders in Python.
 tags:
   - Python
   - FAQ
