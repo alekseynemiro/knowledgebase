@@ -23,6 +23,20 @@ Python bindings for [llama.cpp](./).
 pip install llama-cpp-python
 ```
 
+## How to enable CUDA?
+
+To use CUDA, you need to install the **NVIDIA CUDA Toolkit**.
+
+And then, you need to install the **llama-cpp-python** package with the flag that includes CUDA:
+
+```bash title="Windows"
+set CMAKE_ARGS="-DGGML_CUDA=on" && pip install llama-cpp-python --upgrade --force-reinstall --no-cache-dir
+```
+
+```bash title="Linux"
+export CMAKE_ARGS="-DGGML_CUDA=on" && pip install llama-cpp-python --upgrade --force-reinstall --no-cache-dir
+```
+
 ## How to use the library?
 
 ```python
