@@ -48,6 +48,14 @@ with open("example.txt", "r") as file:
     print(content)
 ```
 
+## How to read a large text file line by line?
+
+```python
+with open("example.txt", "r", encoding="UTF-8") as file:
+    while line := file.readline(): # for line in file:
+        print(line.rstrip())
+```
+
 ## How to copy a file?
 
 ```python
