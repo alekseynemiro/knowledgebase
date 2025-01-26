@@ -23,7 +23,7 @@ There are two main areas of work with LLMs: **[Inference](../llm/glossary.md)** 
 If for Inference the amount of resources has a greater impact on the comfortable speed and accuracy of the models,
 then for Fine-Tuning the requirements are higher, especially for the GPU.
 
-[llama.cpp](../llm/llama.cpp) allows to use CPU and RAM if GPU resources are insufficient.
+[llama.cpp](../llm/llama-cpp) allows to use CPU and RAM if GPU resources are insufficient.
 
 GPUs preferred over CPUs.
 

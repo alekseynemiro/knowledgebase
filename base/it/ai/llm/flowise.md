@@ -42,7 +42,7 @@ The quality of the data set plays an important role. But absolutely any data wil
    * etc.
 5. Connect **Text Splitter** and **Documents Loader**.
 6. Add **LocalAI Embeddings** - this will allow you to integrate your own data into the model:
-   * In the **Base Path** parameter, specify the URL to the *embedding* server. For example, if the server from [llama.cpp](llama.cpp) is used:
+   * In the **Base Path** parameter, specify the URL to the *embedding* server. For example, if the server from [llama.cpp](llama-cpp) is used:
      * Start embedding server: `llama-server.exe -m "C:\models\Meta-Llama-3.1-8B-Instruct-Q8_0.gguf" --embedding --pooling mean --port 8082 --verbose`. In this case the **Base Path** should be `http://localhost:8082/v1`.
    * Specify any value in the **Model Name** parameter. For example, `test`.
 7. Add any **Vector Store**:
@@ -51,7 +51,7 @@ The quality of the data set plays an important role. But absolutely any data wil
      * In the **Base path to load** parameter, specify the path to the folder where the data files will be stored (files are created automatically).
 8. Connect the **Documents Loader** and the **Embedding** with the **Vector Store**.
 9. Add **ChatLocalAI** - to use local LLM:
-   * In the **Base Path** parameter, specify the URL to *inference* server. Use the same model as for the embedding server. For example, if the server from [llama.cpp](llama.cpp) is used:
+   * In the **Base Path** parameter, specify the URL to *inference* server. Use the same model as for the embedding server. For example, if the server from [llama.cpp](llama-cpp) is used:
      * Start inference server: `llama-server.exe -m "C:\models\Meta-Llama-3.1-8B-Instruct-Q8_0.gguf" --port 8080 --verbose`. In this case the **Base Path** should be `http://localhost:8080/v1`.
    * Specify a value for the **Model Name** parameter. This value must match the value in the **LocalAI Embeddings** node.
 10. Connect the **ChatLocalAI** and the **Vector Store** with the **Conversational Retrieval QA Chain**.
