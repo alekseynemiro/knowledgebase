@@ -1,6 +1,7 @@
 ---
 slug: software
 title: Software
+description: Software for Windows
 tags:
   - Software
   - Windows
