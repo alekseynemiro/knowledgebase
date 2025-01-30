@@ -1,4 +1,5 @@
 ---
+slug: software
 title: Software
 tags:
   - Software
