@@ -39,8 +39,9 @@ tags:
 * **PEFT** (Parameter-Efficient Fine-Tuning) - is a method for adapting pre-trained models with minimal changes to model parameters, making fine-tuning more efficient and less resource-intensive.
 * **Perplexity** - measures how well a language model predicts a text sample. The lower the perplexity value, the better the model reflects the specified text.
 * **Precision** - is a metric that estimates what proportion of all objects that the algorithm classified as positive are actually positive.
-* **Prompt** - represents the stimulus or input provided to the model to generate a response or text.
-  Prompt can contain context that will help the model better understand what is being said.
+* **Prompt** - represents the stimulus or input provided to the model to generate a response or text. Prompt can contain context that will help the model better understand what is being said.
+* **Prompt Engineering** - is the process of structuring or creating instructions in order to obtain the best possible output from large language models.
+* **Prompt Tuning** - is an approach to customizing the behavior of a model by changing the prompt.
 * **Quantization** - in language models, this is the process of limiting the rounding of numbers to reduce the amount of RAM consumed.
   The lower the value, the faster the work, but the less accurate the result.
 * **RAG** (Relative-Augmented Generation) - is a technique that grants generative artificial intelligence models information retrieval capabilities by integrating external retrieval systems, improving their context and relevance.
