@@ -29,6 +29,12 @@ const config: Config = {
         languages: ['en', 'ru'],
       },
     ],
+    [
+      require.resolve('docusaurus-plugin-yandex-metrica'),
+      {
+        counterID: '99756525',
+      },
+    ]
   ],
 
   presets: [
