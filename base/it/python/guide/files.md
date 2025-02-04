@@ -146,3 +146,11 @@ with open(".output/result.md", "wb") as output:
         with open(file, "rb") as reader:
             output.write(reader.read())
 ```
+
+## How to get absolute path from relative?
+
+```python
+import os
+
+print(os.path.abspath("../example.txt"))
+```
