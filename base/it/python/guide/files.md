@@ -133,3 +133,16 @@ text_files = glob.glob("*.txt")
 
 print(text_files)
 ```
+
+## How to merge text files into one?
+
+```python
+import glob
+
+read_files = glob.glob("./**/*.md", recursive=True)
+
+with open(".output/result.md", "wb") as output:
+    for file in files:
+        with open(file, "rb") as reader:
+            output.write(reader.read())
+```
