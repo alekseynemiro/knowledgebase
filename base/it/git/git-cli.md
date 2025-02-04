@@ -9,6 +9,12 @@ tags:
 
 # Git CLI
 
+## How to create a new repository in a folder?
+
+```bash
+git init
+```
+
 ## How to clone a remote repository?
 
 ```bash title="Clone the master branch"
