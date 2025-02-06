@@ -34,3 +34,4 @@ tags:
 
 * [Apache Parquet](https://parquet.apache.org/) - is an open source, column-oriented data file format designed for efficient data storage and retrieval
 * [Faiss](https://faiss.ai/) - a library for efficient similarity search and clustering of dense vectors
+* [Qdrant](https://qdrant.tech/) - is an Open-Source Vector Database and Vector Search Engine written in Rust
