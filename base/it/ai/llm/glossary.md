@@ -40,6 +40,7 @@ tags:
 * **IVF** (Inverted Index, or Inverted File) - a data structure used in information retrieval that allows for efficient searching of documents containing specific words.
 * **IVFPQ** (IVF with Product Quantization) - is a composite index that combines inverted file index (IVF) and product quantization (PQ) for reducing storage and increasing efficiency.
 * **LangChain** - is a software framework that helps facilitate the integration of large language models (LLMs) into applications.
+* **LangGraph** - is a library for building stateful, multi-actor applications with LLMs, used to create agent and multi-agent workflows.
 * **Llama** (Large Language Model Meta AI, aka LLaMA) - is a family of autoregressive large language models (LLMs) released by Meta AI starting in February 2023.
 * **llama.cpp** - open source software library that performs inference on various large language models such as Llama.
 * **LLM** (Large Language Model) - a type of neural network designed to understand, generate, and manipulate human language by predicting the likelihood of sequences of words. Typically, large models use large datasets obtained from publicly sources, including the Internet.
