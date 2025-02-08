@@ -68,6 +68,7 @@ tags:
 * **Separator** (sep) - a special separator token to separate multiple answer options for the same question.
 * **SFT** (Supervised Fine-Tuning) - the process of adapting a pre-trained model on labeled data to improve its performance for specific tasks by fine-tuning it with supervised learning techniques.
 * **Supervised Learning Dataset** - is Instructional Dataset.
+* **Temperature** - is a parameter used during text generation to control randomness. It adjusts the probability distribution over possible next words: lower temperatures make the model more deterministic and conservative, while higher temperatures encourage diversity and creativity in outputs by making less likely predictions more probable.
 * **Text corpora** - a large collection of text data merged together, which is typically used to train models in the early stages of their lives.
 * **Token** (code) - the basic unit of input and output in a language model. Token typically represent word, subword, or character.
 * **Top K** - sampling method limits the choice of predicted words to only the most probable variants from the distribution. The lower the value, the worse the result.
