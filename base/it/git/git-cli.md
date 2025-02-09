@@ -162,3 +162,13 @@ This can be useful for generating a version number.
 ```bash
 git log -1 --pretty='%H;%aI;%D'
 ```
+
+## How to check if a commit has a signature (gpg)?
+
+```bash
+git verify-commit <commit_hash>
+```
+
+```bash
+git log --show-signature
+```
