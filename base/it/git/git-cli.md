@@ -110,10 +110,16 @@ git push origin <target_branch_name>
 ```
 
 If the target branch does not exist, it will be created automatically.  
-To tracking branch, use the `-u` flag:
+To tracking branch, use the `--set-upstream` (`-u`) flag:
 
 ```bash
-git push -u origin <target_branch_name>
+git push --set-upstream origin <target_branch_name>
+```
+
+Push all local branches and add tracking:
+
+```bash
+git push --all --set-upstream origin
 ```
 
 ## How to delete a branch?
