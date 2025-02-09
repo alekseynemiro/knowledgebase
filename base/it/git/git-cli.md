@@ -15,6 +15,12 @@ tags:
 git init
 ```
 
+## How to bind a local repository to a remote one?
+
+```bash
+git remote add origin https://git.exmple.org/repo.git
+```
+
 ## How to clone a remote repository?
 
 ```bash title="Clone the master branch"
