@@ -28,6 +28,7 @@ tags:
 * [LocalAI](https://localai.io/) - open-source alternative to OpenAI
 * [ollama](https://github.com/ollama) - CLI and REST API
 * [LangChain](https://www.langchain.com/) - LLM framework
+* [LangGraph Studio](https://github.com/langchain-ai/langgraph-studio)
 * [Semantic Kernel](https://github.com/microsoft/semantic-kernel) - is an SDK that integrates Large Language Models (LLMs)
 
 ## Database Management System (DBMS)
