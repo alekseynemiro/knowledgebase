@@ -2,6 +2,7 @@
 tags:
   - VS Code
   - IDE
+  - FAQ
 ---
 
 # User settings (JSON)
@@ -10,7 +11,7 @@ tags:
 
 `Ctrl + Shift + P` => Preferences: Open User Settings (JSON)
 
-![Preferences: Open User Settings (JSON)](user-settings.png)
+![Preferences: Open User Settings (JSON)](assets/user-settings.png)
 
 ## How to enable/disable autosave?
 
