@@ -1,4 +1,6 @@
 ---
+title: User settings
+description: Questions related to VS Code configuration.
 tags:
   - VS Code
   - IDE
