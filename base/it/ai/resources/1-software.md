@@ -30,6 +30,7 @@ tags:
 * [LangChain](https://www.langchain.com/) - LLM framework
 * [LangGraph Studio](https://github.com/langchain-ai/langgraph-studio)
 * [Semantic Kernel](https://github.com/microsoft/semantic-kernel) - is an SDK that integrates Large Language Models (LLMs)
+* [NLTK](https://www.nltk.org) - Natural Language Toolkit
 
 ## Database Management System (DBMS)
 
