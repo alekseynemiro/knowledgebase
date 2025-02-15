@@ -154,3 +154,11 @@ import os
 
 print(os.path.abspath("../example.txt"))
 ```
+
+## How to combine path components?
+
+```bash
+import os
+
+print(os.path.join("/home/user", "example.txt"))
+```
