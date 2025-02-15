@@ -86,6 +86,9 @@ os.remove("example.txt")
 import os
 
 os.mkdir("new_folder")
+
+# recursive
+os.makedirs("parent/child/child_2", exist_ok=True)
 ```
 
 ## How to get a list of files in a folder?
