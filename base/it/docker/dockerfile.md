@@ -99,3 +99,50 @@ COPY --from=publish /app/publish .
 
 ENTRYPOINT ["dotnet", "MyAspNetProject.dll"]
 ```
+
+## How to set culture and encoding for ASP.NET application in Dockerfile?
+
+1. Install `locales` and `locales-all`.
+2. Set `LC_ALL`, `LANG`, and `LANGUAGE`.
+
+```dockerfile
+FROM mcr.microsoft.com/dotnet/sdk:10.0 AS base
+LABEL project="My ASP.NET project" \
+      version="1.0"
+WORKDIR /app
+EXPOSE 8081
+
+RUN apt-get update && \
+    apt-get install -y locales locales-all
+
+FROM mcr.microsoft.com/dotnet/aspnet:10.0 AS build
+WORKDIR /src
+
+COPY ["nuget.config", "."]
+COPY ["MyAspNetProject/MyAspNetProject.csproj", "MyAspNetProject/"]
+
+RUN dotnet restore
+
+COPY . .
+WORKDIR "/src/MyAspNetProject"
+
+RUN dotnet build "MyAspNetProject.csproj" \
+    --configuration Release \
+    --output "/app/build"
+
+FROM build AS publish
+ARG VERSION
+RUN dotnet publish "MyAspNetProject.csproj" --configuration Release \
+    --output "/app/publish" \
+    --property:Version=$(VERSION)
+
+FROM base AS final
+ENV ENV LC_ALL=ru_RU.UTF-8 \
+        LANG=ru_RU.UTF-8 \
+        LANGUAGE=ru_RU.UTF-8 \
+        ASPNETCORE_URLS="http://+:8081"
+WORKDIR /app
+COPY --from=publish /app/publish .
+
+ENTRYPOINT ["dotnet", "MyAspNetProject.dll"]
+```
