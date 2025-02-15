@@ -147,18 +147,27 @@ with open(".output/result.md", "wb") as output:
             output.write(reader.read())
 ```
 
+## How to get current directory?
+
+```python
+import os
+
+print(f"Current work directory: {os.getcwd()}")
+print(f"Current file directory: {os.path.dirname(os.path.realpath(__file__))}")
+```
+
+## How to combine path components?
+
+```python
+import os
+
+print(os.path.join("/home/user", "example.txt"))
+```
+
 ## How to get absolute path from relative?
 
 ```python
 import os
 
 print(os.path.abspath("../example.txt"))
-```
-
-## How to combine path components?
-
-```bash
-import os
-
-print(os.path.join("/home/user", "example.txt"))
 ```
