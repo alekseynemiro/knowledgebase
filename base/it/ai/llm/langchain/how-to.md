@@ -79,7 +79,7 @@ while True:
     print(f"Assistant: {response.content}")
 ```
 
-## How to use local embedding with LangChain?
+## How to use local embedding with LangChain and llama.cpp server?
 
 OpenAI package is required:
 
@@ -174,6 +174,53 @@ while True:
     answer = response["answer"]
 
     print(f"Assistant: {answer}")
+```
+
+## How to use local embedding with LangChain and Sentence Transformer?
+
+1\. Install **sentence-transformers**:
+
+```bash
+pip install sentence-transformers
+```
+
+2\. Download model [all-MiniLM-L6-v2](https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2).
+
+3\. Create custom embedding class:
+
+```python
+from langchain_core.embeddings import Embeddings
+from sentence_transformers import SentenceTransformer
+from typing import List
+
+class SentenceTransformerEmbeddings(Embeddings):
+
+    def __init__(self, model_path: str):
+        self.model = SentenceTransformer(model_path)
+
+    def embed_documents(self, texts: List[str]) -> List[List[float]]:
+        return [self.model.encode(t).tolist() for t in texts]
+
+    def embed_query(self, text: str) -> List[float]:
+        return self._embedding_func(text)
+
+    async def aembed_query(self, text: str) -> List[float]:
+        return await self._aembedding_func(text)
+
+    def _embedding_func(self, text: str) -> List[float]:
+        return self.model.encode(text).tolist()
+```
+
+4\. Use the custom embedding class:
+
+```python
+embeddings = SentenceTransformerEmbeddings(
+    model_path="path to all-MiniLM-L6-v2 here"
+)
+
+db = FAISS.from_documents(documents, embeddings)
+
+retriever = db.as_retriever()
 ```
 
 ## How to load JSON Lines?
