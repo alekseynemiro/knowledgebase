@@ -35,5 +35,6 @@ tags:
 ## Database Management System (DBMS)
 
 * [Apache Parquet](https://parquet.apache.org/) - is an open source, column-oriented data file format designed for efficient data storage and retrieval
+* [Chroma](https://www.trychroma.com) - is the open-source AI application database
 * [Faiss](https://faiss.ai/) - a library for efficient similarity search and clustering of dense vectors
 * [Qdrant](https://qdrant.tech/) - is an Open-Source Vector Database and Vector Search Engine written in Rust
