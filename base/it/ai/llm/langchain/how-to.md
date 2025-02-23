@@ -198,3 +198,59 @@ print(data)
 ```
 
 ![Result](assets\langchain.png)
+
+## How to create custom text splitter?
+
+The following code shows an example of implementing a custom text splitter for LangChain.
+
+The code splits the text into `<s></s>` (bos + eos) tokens and runs it through `RecursiveCharacterTextSplitter`.
+
+```python
+from langchain.text_splitter import RecursiveCharacterTextSplitter
+from langchain.text_splitter import TextSplitter
+from langchain_core.documents import Document
+from typing import List, Optional
+import copy
+
+class InstructTextSplitter(TextSplitter):
+
+    def __init__(self, chunk_size=512, chunk_overlap=200):
+        self._add_start_index = True
+        self.recursive_splitter = RecursiveCharacterTextSplitter(
+            chunk_size=chunk_size,
+            chunk_overlap=chunk_overlap
+        )
+
+    def split_text(self, text: str) -> List[str]:
+        splits = text.split("</s>")
+        splits = [s.replace("<s>", "").strip() for s in splits if s.strip()]
+        splits = [s for s in splits if s]
+
+        final_chunks = []
+
+        for s in splits:
+            chunks = self.recursive_splitter.split_text(s)
+            final_chunks.extend(chunks)
+
+        return final_chunks
+
+    # to fix: https://github.com/langchain-ai/langchain/issues/16579
+    def create_documents(self, texts: List[str], metadatas: Optional[List[dict]] = None) -> List[Document]:
+            _metadatas = metadatas or [{}] * len(texts)
+            documents = []
+
+            for i, text in enumerate(texts):
+                index = 0
+
+                for chunk in self.split_text(text):
+                    metadata = copy.deepcopy(_metadatas[i])
+
+                    if self._add_start_index:
+                        metadata["start_index"] = index
+                        index += len(chunk)
+
+                    new_doc = Document(page_content=chunk, metadata=metadata)
+                    documents.append(new_doc)
+
+            return documents
+```
