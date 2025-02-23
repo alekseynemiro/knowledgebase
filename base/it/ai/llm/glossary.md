@@ -42,7 +42,7 @@ tags:
 * **LangChain** - is a software framework that helps facilitate the integration of large language models (LLMs) into applications.
 * **LangGraph** - is a library for building stateful, multi-actor applications with LLMs, used to create agent and multi-agent workflows.
 * **Llama** (Large Language Model Meta AI, aka LLaMA) - is a family of autoregressive large language models (LLMs) released by Meta AI starting in February 2023.
-* **llama.cpp** - open source software library that performs inference on various large language models such as Llama.
+* **Llama.cpp** - open source software library that performs inference on various large language models such as Llama.
 * **Min P** - sampling method considers the possibility of including words with a probability of at least P. Used as a complement to Top K and Top P.
 * **NLP** (Natural Language Processing) - a field of artificial intelligence focused on the interaction between computers and humans through natural language, enabling machines to understand, interpret, and generate human languages.
 * **PEFT** (Parameter-Efficient Fine-Tuning) - is a method for adapting pre-trained models with minimal changes to model parameters, making fine-tuning more efficient and less resource-intensive.
@@ -66,6 +66,7 @@ tags:
 * **Sampling** - used to reduce data volumes without losing information.
 * **Separator** (sep) - a special separator token to separate multiple answer options for the same question.
 * **Supervised Learning Dataset** - is Instructional Dataset.
+* **T5** (Text-to-Text Transfer Transformer) - type of large language model to transform text into text.
 * **Temperature** - is a parameter used during text generation to control randomness. It adjusts the probability distribution over possible next words: lower temperatures make the model more deterministic and conservative, while higher temperatures encourage diversity and creativity in outputs by making less likely predictions more probable. It is not recommended to use the value `0.0` and `1.0`, because the result may be unexpected.
 * **Text corpora** - a large collection of text data merged together, which is typically used to train models in the early stages of their lives.
 * **Token** (code) - the basic unit of input and output in a language model. Token typically represent word, subword, or character.
