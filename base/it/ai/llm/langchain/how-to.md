@@ -223,6 +223,41 @@ db = FAISS.from_documents(documents, embeddings)
 retriever = db.as_retriever()
 ```
 
+## How to use Qdrant?
+
+```bash
+pip install langchain_qdrant
+```
+
+```python
+from langchain_qdrant import QdrantVectorStore
+from qdrant_client import QdrantClient
+from qdrant_client.http.models import Distance, VectorParams
+
+# embeddings = for example SentenceTransformerEmbeddings
+vector_size = embeddings.model.get_sentence_embedding_dimension()
+
+qdrant_client = QdrantClient(
+    path="path to data storage",
+)
+
+if qdrant_client.collection_exists("my-collection"):
+    qdrant_client.delete_collection("my-collection")
+
+qdrant_client.create_collection(
+    collection_name="my-collection",
+    vectors_config=VectorParams(size=vector_size, distance=Distance.COSINE),
+)
+
+db = QdrantVectorStore(
+    client=qdrant_client,
+    collection_name="my-collection",
+    embedding=embeddings,
+)
+
+db.add_documents(documents)
+```
+
 ## How to load JSON Lines?
 
 ```bash
