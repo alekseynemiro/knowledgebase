@@ -10,49 +10,49 @@ tags:
 
 # WSL (Windows Subsystem for Linux)
 
-## How to find a list of available versions of distributions for installation?
+## Как получить список доступных для установки версий дистрибутивов?
 
 ```bash
 wsl --list --online
 ```
 
-## How to install distribution?
+## Как установить дистрибутив?
 
 ```bash
 wsl --install --distribution Ubuntu
 ```
 
-## How to check the default distribution and WSL version?
+## Как проверить дистрибутив по умолчанию и версию WSL?
 
 ```bash
 wsl --status
 ```
 
-## How to change the WSL version for distribution?
+## Как изменить версию WSL для дистрибутива?
 
-```bash title="Set for distribution"
+```bash title="Задать версию WSL для дистрибутива"
 wsl --set-version ${DISTR_NAME} 2
 ```
 
-```bash title="Set default"
+```bash title="Задать версию WSL по умолчанию"
 wsl --set-default-version 2
 ```
 
 `2` - version number.
 
-## How to find the WSL version for distribution?
+## Как получить список версий WSL?
 
 ```bash
 wsl --list --verbose
 ```
 
-## How to update a Linux kernel component?
+## Как обновить компонент ядра Linux?
 
 ```bash
 wsl --update
 ```
 
-## How to remove distribution?
+## Как удалить дистрибутив?
 
 ```bash
 wsl --unregister ${DISTR_NAME}
@@ -60,4 +60,4 @@ wsl --unregister ${DISTR_NAME}
 
 ## Error code: Wsl/Service/CreateVm/HCS/HCS_E_SERVICE_NOT_AVAILABLE
 
-Install and enable Hyper-V.
+Установите и включите **Hyper-V**.

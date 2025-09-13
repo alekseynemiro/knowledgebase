@@ -4,30 +4,38 @@ tags:
   - LLM
   - Machine Learning
   - AI
+  - Большие языковые модели
+  - ИИ
 ---
 
 # GPT4All
 
-GPT4All - private local LLM environment.
+**GPT4All** — приложение для локального использования больших языковых моделей (LLM).
 
 * [https://www.nomic.ai/gpt4all](https://www.nomic.ai/gpt4all)
 * [https://github.com/nomic-ai/gpt4all](https://github.com/nomic-ai/gpt4all)
 
-## Get started
+:::note
+Информация актуальна для **GPT4All v3.6.1**.
+:::
 
-1. Download and install.
-2. Open the Models tab => Find and download Models. For example, **Llama 3**.
-3. Open the LocalDocs tab and Add collection. Wait for the index creation to complete.
-4. Start new chat => Select model and select LocalDocs.
-5. Enjoy!
+## Быстрый старт
+
+1. Скачайте и установите приложение.
+2. Откройте вкладку **Models** => найдите и загрузите подходящие для вашего оборудования модели. Например, **Llama 3**.
+3. Откройте вкладку **LocalDocs**  и нажмите **Add collection**. Выберите файлы для создания коллекции. Дождитесь завершения индексации.
+4. Откройте вкладку **Chats** и начните новый чат.
+5. Выберите модель.
+6. Нажмите **LocalDocs** и выберите созданную коллекцию.
+7. Наслаждайтесь общением!
 
 ![GPT4All](assets/gpt4all.png)
 
-## Troubleshooting
+## Решение проблем
 
 ### Error 0xc0000005
 
-If error `0xc0000005` occurs, you need to do the following:
+Если возникла ошибка `0xc0000005`, вам необходимо сделать следующее:
 
-* [ ] Make sure your CPU supports AVX.
-* [ ] Check your app settings. Try selecting another device.
+* [x] Убедитесь, что ваш процессор поддерживает **AVX**.
+* [x] Проверьте настройки приложения. Попробуйте выбрать другое устройство.

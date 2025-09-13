@@ -1,7 +1,7 @@
 ---
 slug: software
-title: Software
-description: AI and Machine Learning Software.
+title: Программы для ИИ
+description: Программное обеспечение для искусственного интеллекта и машинного обучения.
 tags:
   - Software
   - AI
@@ -9,32 +9,37 @@ tags:
   - Large Language Models
   - Machine Learning
   - Links
+  - ИИ
+  - Большие языковые модели
+  - Софт
+  - ПО
+  - Программное обеспечение
 ---
 
-# Software
+# Программное обеспечение для ИИ
 
-## Graphical user interface (GUI)
+## Приложения с графическим интерфейсом (GUI)
 
-* [GPT4All](https://www.nomic.ai/gpt4all) - easy start for offline use
-* [LM Studio](https://lmstudio.ai/) - easy start for offline work with LLMs
-* [FlowiseAI](https://flowiseai.com/) - open source low-code tool for developers to build customized LLM orchestration flow
+* [GPT4All](https://www.nomic.ai/gpt4all) — простой способ познакомиться с использованием локальных моделей (LLM)
+* [LM Studio](https://lmstudio.ai/) — расширенные возможности использования локальных языковых моделей
+* [FlowiseAI](https://flowiseai.com/) — инструмент с открытым исходным кодом для визуального, безкодового (low-code) программирования LLM
 * [KoboldAI UI](https://github.com/LostRuins/koboldcpp)
 
-## Development
+## Разработка
 
-* [AutoGen](https://github.com/microsoft/autogen) - a programming framework for agentic AI
-* [llama.cpp](https://github.com/ggerganov/llama.cpp) - LLM inference in C/C++
-* [node-llama-cpp](https://github.com/withcatai/node-llama-cpp) - llama.cpp for Node.js
-* [LocalAI](https://localai.io/) - open-source alternative to OpenAI
-* [ollama](https://github.com/ollama) - CLI and REST API
-* [LangChain](https://www.langchain.com/) - LLM framework
+* [AutoGen](https://github.com/microsoft/autogen) — программная платформа для агентного ИИ
+* [llama.cpp](https://github.com/ggerganov/llama.cpp) — набор решений для работы с LLM
+* [node-llama-cpp](https://github.com/withcatai/node-llama-cpp) — обёртка llama.cpp для Node.js
+* [LocalAI](https://localai.io/) — альтернатива OpenAI с открытым исходным кодом
+* [ollama](https://github.com/ollama) — CLI и REST API для интеграции с большими языковыми моделями
+* [LangChain](https://www.langchain.com/) - программная платформа (framework) для интеграции с LLM на Python и Node.js
 * [LangGraph Studio](https://github.com/langchain-ai/langgraph-studio)
-* [Semantic Kernel](https://github.com/microsoft/semantic-kernel) - is an SDK that integrates Large Language Models (LLMs)
-* [NLTK](https://www.nltk.org) - Natural Language Toolkit
+* [Semantic Kernel](https://github.com/microsoft/semantic-kernel) — SDK для интеграции больших языковых моделей (LLM)
+* [NLTK](https://www.nltk.org) — набор инструментов естественного языка (Natural Language Toolkit)
 
-## Database Management System (DBMS)
+## Системы управления базами данных (СУБД)
 
-* [Apache Parquet](https://parquet.apache.org/) - is an open source, column-oriented data file format designed for efficient data storage and retrieval
-* [Chroma](https://www.trychroma.com) - is the open-source AI application database
-* [Faiss](https://faiss.ai/) - a library for efficient similarity search and clustering of dense vectors
-* [Qdrant](https://qdrant.tech/) - is an Open-Source Vector Database and Vector Search Engine written in Rust
+* [Apache Parquet](https://parquet.apache.org/) — колоночная СУБД с открытым исходным кодом, предназначенный для эффективного хранения и извлечения данных
+* [Chroma](https://www.trychroma.com) — векторная СУБД с открытым исходным кодом от Google
+* [Faiss](https://faiss.ai/) — библиотека для эффективного поиска сходства и кластеризации плотных векторов, разработанная компаний Facebook/Meta
+* [Qdrant](https://qdrant.tech/) — это векторная база данных и поисковая система векторов с открытым исходным кодом, написанная на Rust

@@ -1,6 +1,6 @@
 ---
 title: Flowise
-description: Low code LLM Apps Builder.
+description: Визуальный конструктор приложений LLM.
 tags:
   - Flowise
   - LLM
@@ -8,61 +8,66 @@ tags:
   - Machine Learning
   - AI
   - Step-by-Step
+  - Большие языковые модели
+  - ИИ
 ---
 
 # Flowise
 
-Flowise - Low code LLM Apps Builder.
+**Flowise** — визуальный конструктор приложений LLM без написания кода.
 
 * [https://flowiseai.com/](https://flowiseai.com/)
 * [https://github.com/FlowiseAI/Flowise](https://github.com/FlowiseAI/Flowise)
 
-## How to embedding own data into LLM?
+## Как внедрить собственные данные в LLM?
 
-This approach does not change the model. User data is attached as if on the side.
+Внедрение данных — это предоставление доступа к данным через контекст модели.
 
-It's simple and doesn't require a lot of technical resources, but it may not be as effective as you'd like.
+Это простой способ обучения больших языковых моделей, который не требуется серьезных технических ресурсов.
 
-The quality of the data set plays an important role. But absolutely any data will do for testing.
+*Если что-то не понятно, попробуйте взглянуть на скриншоты внизу страницы.*
 
-*If something is not clear, try looking at the screenshots at the bottom of the page.*
+:::note
+Информация актуальна для **Flowise v2.2.4**.
+:::
 
-1. Open Chatflows and Create a new one.
-2. Use **LangChain**, as this framework currently has the largest number of components. Add **Conversational Retrieval QA Chain**.
-3. Add any **Documents Loader**. For example:
-   * **Text File** for a single text file:
-     * Upload text file. This can be absolutely any text file.
-   * **Json Lines File** for single `.jsonl` file:
-     * Upload [dataset](datasets) in JSON Lines format.
-     * Specify the name of the key in the JSON that contains the assistant's (model's) response in the **Pointer Extractor** parameter.
-   * etc.
-4. Add **Text Splitter**, depending on the type of document data. For example,
-   * **Markdown Text Splitter** for markdown files;
-   * **Recursive Character Text Splitter** for JSON Lines files;
-   * etc.
-5. Connect **Text Splitter** and **Documents Loader**.
-6. Add **LocalAI Embeddings** - this will allow you to integrate your own data into the model:
-   * In the **Base Path** parameter, specify the URL to the *embedding* server. For example, if the server from [llama.cpp](llama-cpp) is used:
-     * Start embedding server: `llama-server.exe -m "C:\models\Meta-Llama-3.1-8B-Instruct-Q8_0.gguf" --embedding --pooling mean --port 8082 --verbose`. In this case the **Base Path** should be `http://localhost:8082/v1`.
-   * Specify any value in the **Model Name** parameter. For example, `test`.
-7. Add any **Vector Store**:
-   * **In-Memory Vector Store** - easy way to start.
-   * **Faiss** - local Vector Storage from Facebook developers, nothing complicated:
-     * In the **Base path to load** parameter, specify the path to the folder where the data files will be stored (files are created automatically).
-8. Connect the **Documents Loader** and the **Embedding** with the **Vector Store**.
-9. Add **ChatLocalAI** - to use local LLM:
-   * In the **Base Path** parameter, specify the URL to *inference* server. Use the same model as for the embedding server. For example, if the server from [llama.cpp](llama-cpp) is used:
-     * Start inference server: `llama-server.exe -m "C:\models\Meta-Llama-3.1-8B-Instruct-Q8_0.gguf" --port 8080 --verbose`. In this case the **Base Path** should be `http://localhost:8080/v1`.
-   * Specify a value for the **Model Name** parameter. This value must match the value in the **LocalAI Embeddings** node.
-10. Connect the **ChatLocalAI** and the **Vector Store** with the **Conversational Retrieval QA Chain**.
-11. Save the Chatflow.  
+1. Откройте раздел **Chatflows** и нажмите **Create**.
+2. Выберите **LangChain** в качестве набора компонентов.
+3. Добавьте **Conversational Retrieval QA Chain**.
+4. Добавьте любой загрузчик документов - **Documents Loader**. Например,
+   * **Text File** для текстовых файлов:
+     * Загрузите любой текстовой файл, данные которого будут внедрены в контекст.
+   * **Json Lines File** для файлов `.jsonl`:
+     * Загрузите [набор данных](datasets) в формате JSON Lines.
+     * Укажите в параметре **Pointer Extractor** имя поля в JSON, которое содержит ответ помощника.
+   * и т.д.
+5. Добавьте **Text Splitter**. Например,
+   * **Markdown Text Splitter** для файлов в формате markdown;
+   * **Recursive Character Text Splitter** для файлов в формате JSON Lines;
+   * и т.д.
+6. Соедините **Text Splitter** и **Documents Loader**.
+7. Добавьте **LocalAI Embeddings** - это позволит интегрировать данные в модель:
+   * В параметре **Base Path** укажите URL к серверу *внедрения* (embedding server). Например, при использовании [llama.cpp](llama-cpp):
+     * Если запущен llama-server в режиме внедрения: `llama-server.exe -m "C:\models\Meta-Llama-3.1-8B-Instruct-Q8_0.gguf" --embedding --pooling mean --port 8082 --verbose`, то в таком случае, в параметре **Base Path** должен быть адрес `http://localhost:8082/v1`.
+   * Укажите любое имя модели в параметре **Model Name**. Например, `test`.
+8. Добавьте любой **Vector Store**:
+   * **In-Memory Vector Store** - самый простой вариант для первой пробы.
+   * **Faiss** - локальная векторная база от Facebook, ничего сложного, главное установить правильную версию:
+     * В параметре **Base path to load** укажите путь папке хранилища.
+9. Соедините **Documents Loader** и **Embedding** с **Vector Store**.
+10. Добавьте **ChatLocalAI** - это позволит использовать локальные LLM:
+   * В папаметр **Base Path** укажите URL сервера *воспроизведения* (inference server). Используйте модель аналогичную модели серера внедрения. Например, при использовании [llama.cpp](llama-cpp):
+     * Если llama-server запущен со следующими параметрами: `llama-server.exe -m "C:\models\Meta-Llama-3.1-8B-Instruct-Q8_0.gguf" --port 8080 --verbose`, то в параметр  **Base Path** следует указать адрес `http://localhost:8080/v1`.
+   * Укажите в параметр **Model Name** имя модели аналогичное имени указанному в узле **LocalAI Embeddings**.
+11. Соедините **ChatLocalAI** и **Vector Store** с **Conversational Retrieval QA Chain**.
+12. Сохранить рабочий процесс чата.  
     [![Chatflow](assets/flowise-chatflow.png)](assets/flowise-chatflow.png)
-12. Make sure you have the **embedding server** and **inference server** running.
-13. Click the **Upsert Vector Database** button. Wait for the operation to complete.  
-    This may take a long time, depending on the size of the dataset.  
+13. Убедитесь, что сервера внедрения (embedding server) и воспроизведения (inference server) запущены.
+14. Нажмите на кнопку **Upsert Vector Database**. Дождитесь завершения внедрения.  
+    Процесс внедрения может занять длительное время, в зависимости от размера набора данных и производительности компьютера.  
     ![Upsert Vector Database](assets/flowise-upsert-vector-database.png)  
     ![Upsert Vector Database results](assets/flowise-upsert-results.png)
-14. Start a new chat to check if everything works correctly.  
-    It is a good practice to specify a prompt message to introduce the model into context.
+15. Запустите новый чат чтобы проверить, как это работает.  
+    Хорошей практикой является указание подсказки для введения модели в контекст.
     ![Chatflow work](assets/flowise-chatflow-result.png)
-15. Enjoy!
+16. Наслаждайтесь!

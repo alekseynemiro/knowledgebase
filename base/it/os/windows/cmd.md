@@ -11,67 +11,67 @@ tags:
 
 # Windows Command Prompt
 
-## How to open a command prompt in any folder?
+## Как открыть командную строку в любой папке?
 
-Just type `cmd` in the address bar of the explorer:
+Просто введите `cmd` в адресной строке проводника:
 
 ![cmd](assets/cmd.png)
 
-If you hold down the `Shift` key and right-click anywhere, you will be able to launch PowerShell:
+Если удерживать клавишу `Shift` и щелкнуть правой кнопкой мыши в любом месте, вы сможете запустить **PowerShell**:
 
 ![PowerShell](assets/powershell.png)
 
-## How to set environment variable? (for session only)
+## Как установить переменную окружения? (только для текущей сессии)
 
 ```bash
 set VAR_NAME=VALUE
 ```
 
-## How to get the hostname of the current machine?
+## Как получить имя хоста текущей машины?
 
 ```bash
 hostname
 ```
 
-## How to create a symbolic link?
+## Как создать символьную ссылку?
 
-```bash title="Syntax"
+```bash title="Синтаксис"
 mklink LINK_PATH TARGET_PATH
 ```
 
-```bash title="Example"
+```bash title="Пример"
 mklink  "C:\Program Files\nodejs" "C:\nvm\v18.16.0" 
 ```
 
-## How to view the current DNS cache?
+## Как посмотреть текущий кэш DNS?
 
-```bash title="View cache"
+```bash title="Просмотр кэша"
 ipconfig /displaydns
 ```
 
-```bash title="Clear cache"
+```bash title="Очистить кэш"
 ipconfig /flushdns
 ```
 
-## How to find all substrings in command output?
+## Как найти все подстроки в выводе команды?
 
 ```
 dir | findstr git
 ```
 
-## How to launch the event log?
+## Как запустить журнал событий Windows?
 
 ```bash
 eventvwr
 ```
 
-## How to check for a specific port?
+## Как проверить занят определенный порт или нет?
 
 ```bash
 netstat -na | find "8080"
 ```
 
-## How to restart a service?
+## Как перезапустить службу?
 
 ```bash
 net stop nginx && net start nginx

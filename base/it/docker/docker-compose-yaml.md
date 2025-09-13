@@ -5,9 +5,12 @@ tags:
   - Virtualization
   - CI/CD
   - DevOps
+  - Виртуализация
+  - Развертывание
+  - Автоматизация
 ---
 
-# Docker Compose file
+# docker-compose.yaml
 
 ```yaml
 version: '3.7'

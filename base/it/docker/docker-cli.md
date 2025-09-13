@@ -6,159 +6,160 @@ tags:
   - CI/CD
   - DevOps
   - FAQ
+  - Виртуализация
+  - Развертывание
+  - Автоматизация
 ---
 
 # Docker CLI
 
-## What is the difference between buildx and just build?
+## В чем разница между buildx и просто build?
 
-`buildx` is a command that uses **BuildKit**, a new, more powerful builder.
+`buildx` — это команда, которая использует **BuildKit**, новый, более мощный конструктор.
 
-## How to run multiple containers?
+## Как запустить несколько контейнеров?
 
-Use [Docker Compose](docker-compose-cli).
+Используйте [Docker Compose](docker-compose-cli).
 
-## How to build an image?
+## Как собрать образ?
 
-Image parameters are defined in the [Dockerfile](dockerfile).
+Параметры образа задаются в файле [Dockerfile](dockerfile).
 
-The "Dockerfile" name is used by default.
-
-By default, the Dockerfile from the current working directory will be used.
+По умолчанию используется имя «Dockerfile».
 
 ```bash
 docker build .
 ```
 
-Set image name:
+Задать имя образа:
 
 ```bash
 docker build . --tag repo_name:image_name
 ```
 
-Set build time variables:
+Задать аргументы запуска:
 
 ```bash
 docker build . --build-arg ARG_1_NAME=ARG_1_VALUE --build-arg ARG_2_NAME=ARG_2_VALUE
 ```
 
-Custom name of Dockerfile:
+Использовать собственное имя для `Dockerfile`:
 
 ```bash
 docker build -f some/path/MyDockerfile
 ```
 
-Other useful options:
+Другие полезные параметры:
 
-* `--progress=plain` - output full log;
-* `--no-cache` - disable cache;
-* `--rm` -- remove intermediate containers after a successful build;
-* `-q`, `--quiet` - quiet mode, if successful the output will be the image identifier;
+* `--progress=plain` — выводить весь отчёт;
+* `--no-cache` — отключить кэширование;
+* `--rm` — удалить промежуточные контейнеры после успешной сборки;
+* `-q`, `--quiet` — тихий режим, в случае успеха на выходе будет только идентификатор образа;
 
-## How to display full log when building image?
+## Как отобразить полный журнал при создании образа?
 
 ```bash
 docker build . --progress=plain
 ```
 
-## How to disable cache when building an image?
+## Как отключить кэш при создании образа?
 
 ```bash
 docker build . --no-cache
 ```
 
-## How to manage (start/pause/restart/stop) a container?
+## Как управлять контейнером (запускать/приостанавливать/перезапускать/останавливать)?
 
 ```bash
 docker run -d --name MY_CONTAINER -p 80:5080 -p 443:5443 -e ASPNETCORE_URLS="http://+:5080;https://+:5443" ${IMAGE_ID_OR_NAME}
 ```
 
-* `-d`, `--detach` - background mode;
-* `-e`, `--env` - set environment variables;
-* `-p`, `--publish` - forward container port(s) on host (`host_port:container_port`);
-* `--name` - assign container name;
+* `-d`, `--detach` — запуск в фоновом режиме;
+* `-e`, `--env` — позволяет установить переменные окружения;
+* `-p`, `--publish` — перенаправляет порты (`host_port:container_port`);
+* `--name` — задаёт имя контейнера;
 
-To `start`, `pause`, `restart`, and `stop` of the container there are commands with the same name:
+Доступны типовые команды `start`, `pause`, `restart` и `stop`:
 
 ```bash
 docker start ${CONTAINER_NAME_OR_ID}
 ```
 
-## How to view container logs?
+## Как посмотреть логи контейнера?
 
 ```bash
 docker logs ${CONTAINER_NAME_OR_ID}
 ```
 
-* `--details` - show extra data;
-* `-n`, `--tail` - show number of lines from end of log;
+* `--details` — показать расширенные данные;
+* `-n`, `--tail` — показать N строк с конца журнала;
 
-## How to remove a container?
+## Как удалить контейнер?
 
 ```bash
 docker rm ${CONTAINER_NAME_OR_ID}
 ```
 
-* `-f`, `--force` - stop and remove;
+* `-f`, `--force` — остановить и удалить, не задавать никаких вопросов;
 
-## How to get a list of containers?
+## Как получить список контейнеров?
 
 ```bash
 docker ps
 ```
 
-All containers:
+Все контейнеры, включая остановленные:
 
 ```bash
 docker ps -a
 ```
 
-Latest created containers:
+Недавно созданные контейнеры:
 
 ```bash
 docker ps -l
 ```
 
-Without truncation of long strings:
+Запретить обрезание длинных строк:
 
 ```bash
 docker ps --no-trunc
 ```
 
-It is possible to use `grep` to filter the output:
+Для фильтрации вывода можно использовать `grep` (только в системах **Linux**):
 
 ```bash
 docker ps -a | grep ${SEARCH_STRING}
 ```
 
-## How to get a list of images?
+## Как получить список образов?
 
 ```bash
 docker image list --all
 ```
 
-* `-a`, `--all` - show all images;
-* `--no-trunc` - without truncation of long strings;
+* `-a`, `--all` - все образы;
+* `--no-trunc` - отключить обрезание длинных строк;
 
-## How to view image history?
+## Как посмотреть историю образа?
 
 ```bash
 docker image history ${IMAGE_NAME_OR_ID}
 ```
 
-## How to remove an image?
+## Как удалить образ?
 
 ```bash
 docker rmi ${IMAGE_NAME_OR_ID}
 ```
 
-## How to view the creator of the image?
+## Как получить имя автора образа?
 
 ```bash
 docker inspect ${IMAGE_NAME_OR_ID}
 ```
 
-## How to view a container files?
+## Как посмотреть файлы контейнера?
 
 ```bash
 docker create --name="${CONTAINER_NAME_OR_ID}" ${IMAGE_NAME_OR_ID}
@@ -166,13 +167,13 @@ docker export ${CONTAINER_NAME_OR_ID} | tar -t
 docker rm ${CONTAINER_NAME_OR_ID}
 ```
 
-## How to export a container to a file?
+## Как экспортировать контейнер в файл?
 
 ```bash
 docker export ${CONTAINER_NAME_OR_ID} > output.tar
 ```
 
-## How to execute a command in a container?
+## Как выполнить команду в контейнере?
 
 ```bash
 docker run --name ${CONTAINER_NAME_OR_ID} -d -i -t ${IMAGE_NAME_OR_ID} /bin/sh
@@ -186,28 +187,28 @@ docker exec -it ${CONTAINER_NAME_OR_ID} /bin/bash
 docker exec -it ${CONTAINER_NAME_OR_ID} /bin/sh
 ```
 
-## How to clear resources?
+## Как очистить ресурсы?
 
-```bash title="Remove unused images, containers, and networks"
+```bash title="Удалить неиспользуемые образы, контейнеры и сети"
 docker system prune
 ```
 
-```bash title="Stop and remove ALL, ALL, ALL"
+```bash title="Остановить и удалите ВСЁ, ВСЁ, ВСЁ"
 docker system prune -a
 ```
 
-```bash title="Remove only unused images"
+```bash title="Удалить только неиспользуемые образы"
 docker image prune
 ```
 
-```bash title="Remove only stopped containers"
+```bash title="Удалить только остановленные контейнеры"
 docker container prune
 ```
 
-```bash title="Remove only unused volumes"
+```bash title="Удалить только неиспользуемые тома"
 docker volume prune
 ```
 
-```bash title="Remove only unused networks"
+```bash title="Удалить только неиспользуемые сети"
 docker network prune
 ```

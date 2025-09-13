@@ -1,6 +1,6 @@
 ---
-title: Command Arguments
-description: Using command line arguments in Python.
+title: "Python: Command Arguments"
+description: Использование аргументов командной строки в Python.
 tags:
   - Python
   - FAQ
@@ -8,7 +8,7 @@ tags:
 
 # Python: Command Arguments
 
-## How to add command line parameter processing?
+## Как добавить обработку параметров командной строки?
 
 ```python
 import argparse

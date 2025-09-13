@@ -1,6 +1,6 @@
 ---
-title: Datasets
-description: A few words about datasets in the world of LLMs.
+title: Наборы данных
+description: Несколько слов о наборах данных (datasets) в мире LLM.
 tags:
   - Glossary
   - LLM
@@ -8,43 +8,62 @@ tags:
   - Machine Learning
   - AI
   - Datasets
+  - Embedding
+  - RAG
+  - Большие языковые модели
+  - Машинное обучение
+  - ИИ
 ---
 
-# Datasets
+# Наборы данных
 
-Dataset is a collection of organized data. Datasets can be represented in various formats, such as tables (e.g. CSV files), databases, or specialized data formats.
+*Обновлено: 2025-09-07*
 
-## Data format
+Набор данных — это совокупность упорядоченных данных. Наборы данных могут быть представлены в различных форматах, таких как таблицы (например, CSV-файлы), базы данных или специализированные форматы данных.
 
-I see that the most common formats used for storing data are **Text Plain**, **Markdown**, **JSONL** and **Parquet**.
+Текущая база знаний в исходном виде является набором данных в формате markdown.
 
-JSONL is a text file, it is the simplest.  
-Parquet is a binary data storage.
+## Формат данных
 
-[Judging by the number of datasets](https://huggingface.co/datasets?modality=modality:text&sort=trending), the Parquet format is in the lead for text data.
+Распространенные форматы для хранения наборов данных: **обычный текст**, **Markdown**, **JSONL** и **Parquet**.
 
-For example, below are two dataset structures in JSONL format:
+* JSONL — это текстовой файл, где каждая строка содержит самодостаточный JSON. Это самый простой текстовой форма для больших наборов данных.
+* Parquet — это бинарное хранилище данных (СУБД).
 
-```json title="Conversational format"
+[Если судить по количеству наборов текстовых данных](https://huggingface.co/datasets?modality=modality:text&sort=trending), Parquet является наиболее популярным.
+
+На сегодняшний нет четких стандартов по структуре данных. С одной стороны, это проблема, потому что непонятно, в каком виде делать наборы данных, с другой — это свобода выбора. Проще говоря, набор данных можно сделать в **абсолютно любом удобном виде**.
+
+Тем не менее, есть типы туры наборов данных, которые пользуются популярностью и вполне возможно, что когда-нибудь они станут стандартом.
+
+Ниже представлена пара примеров наборов данных в формате JSONL с разной структурой:
+
+```json title="Диалоги (conversational format)"
 {"messages":[{"role": "system", "content": "You are..."}, {"role": "user", "content": "..."}, {"role": "assistant", "content": "..."}]}
 {"messages":[{"role": "system", "content": "You are..."}, {"role": "user", "content": "..."}, {"role": "assistant", "content": "..."}]}
 {"messages":[{"role": "system", "content": "You are..."}, {"role": "user", "content": "..."}, {"role": "assistant", "content": "..."}]}
 ```
 
-```json title="Instruction format"
+```json title="Инструкции (instruction format)"
 {"prompt": "<prompt text>", "completion": "<ideal generated text>"}
 {"prompt": "<prompt text>", "completion": "<ideal generated text>"}
 {"prompt": "<prompt text>", "completion": "<ideal generated text>"}
 ```
 
-## Special tokens
+Большие языковые модели работают с неструктурированным текстом.
 
-* **Beginning Of Sentence** (bos) - is a special token that marks the beginning of a sentence. For Llama realm models is `<s>`.
-* **End Of Sentence** (eos) - is a special token that marks the end of a sentence. For Llama realm models is `</s>`.
-* **Padding** (pad) - special token for unifying the length of a sequence in a batch.
-* **Unknown** (unk) - a special token that represents an unknown or rarely encountered word. For Llama family is `<unk>`.
+Поскольку разные **модели** имеют свои **особенности**, набор данных **удобно хранить** в формате **JSON или в базе данных**, а потом **трансформировать** в текстовой формат **адаптированный для конкретных моделей**.
 
-```text title="Example"
+## Специальные маркеры (tokens)
+
+| Маркер (токен)              | Описание                                                 | GPT              | Llama   | Gemini    | BERT    |
+|-----------------------------|----------------------------------------------------------|------------------|---------|-----------|---------|
+| Beginning Of Sentence (BOS) | Указывает на начало предложения.                         | `<\|im_start\|>` | `<s>`   | `<bos>`   | `[CLS]` |
+| End Of Sentence (EOS)       | Указывает на конец предложения.                          | `<\|im_end\|>`   | `</s>`  |  `<eos>`  | `[SEP]` |
+| Padding (PAD)               | Токен для унификации длины последовательности в пакете.  | отсутствует      | `<pad>` | `<pad>`   | `[PAD]` |
+| Unknown (UNK)               | Токен для обозначения неизвестного слова.                | отсутствует      | `<unk>` |  `<unk>`  | `[UNK]` |
+
+```text title="Пример для моделей семейства Llama"
 <s>Lorem ipsum dolor sit amet, consectetur adipiscing elit,
 sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</s>
 <s>Ut enim ad minim veniam, quis nostrud exercitation ullamco
@@ -55,70 +74,104 @@ esse cillum dolore eu fugiat nulla pariatur.</s>
 sunt in culpa qui officia deserunt mollit anim id est laborum.</s>
 ```
 
-## Dataset types
+```text title="Пример для моделей семейства Gemini/Gemma"
+<bos>User: Привет!
+Assistant: Здравствуйте! Чем я могу помочь?<eos>
+```
 
-### Instructional Dataset (instruct)
+## Типы наборов данных
 
-It is a type of dataset that contains commands or instructions for a model to perform a specific actions.
+### Инструкции (instruct)
+
+Набор инструкций — является парой значений вопрос-ответ.
+
+Границы начала и конца вопроса-ответа отмечаются токенами BOS и EOS.
+
+Для моделей семейства Llama вопрос обрамляется специальными токенами `[INST][/INST]`.
 
 ```text
 <s>[INST]
-Who is Aleksey Nemiro?
+Кто такой Алексей Немиро?
 [/INST]
 
-This is a Russian developer, author of articles and projects in the field of information technology.
+Российский разработчик, автор статей и проектов в области информационных технологий.
 </s>
 ```
 
 ```text
 <s>[INST]
-Show an example of a "Hello, world!" program in Python
+Покажи пример программы "Hello, world!" на Python
 [/INST]
 
-This is an example of implementing the "Hello, world!" program in Python, which prints the phrase of the same name to the console:
+Конечно! Вот пример реализации программы "Hello, world!" на Python:
 
 '''python
 print('Hello, world!')
 '''
 
-You can save this code to a file and execute it with the command 'python helloworld.py'.
+Вы можете сохранить этот код в файл и выполнить с помощью команды 'python helloworld.py'.
 </s>
 ```
 
-### Dialogue Dataset
+### Диалоги
 
-It is a type of dataset that contains conversations between two or more participants.
+Диалоговый тип набора данных представляет собой фрагменты диалогов, которые модели могут использовать в качестве примера.
 
-```json
+Каждый диалог **должен быть самодостаточным и ограничиваться одним вопросом или темой**. Чем **меньше** размер диалога, тем **лучше**.
+
+При построении диалогового набора данных **важно соблюдать порядок ролей**. Существую три основные роли: `system`, `user`, `assistant`.
+Некоторые модели содержат дополнительны роли для работы с инструментами (внешними функциями): `tool` и `function`.
+
+Большинство моделей ожидают диалог по одной из следующих схем:
+
+* system, user, assistant
+* system, assistant, user, assistant
+* user, assistant
+
+У разных моделей разные требования и возможности. Общий порядок для всех: `user, assistant` — это будет работать корректно во всех случаях.
+Если нарушать последовательность (например: `user, assistant, assistant, user`) или использовать неподдерживаемые роли (такие как `tool` и `function`), то результат работы может быть непредсказуемым.
+
+```json title="Пример диалога в формате JSON"
 {
   "messages": [
     { 
       "role": "system", 
-      "content": "You are..."
+      "content": "Ты умный помощник ."
     },
     {
       "role": "user", 
-      "content": "..."
+      "content": "Какая погода в Санкт-Петербурге сегодня?"
     },
     {
       "role": "assistant",
-      "content": "..."
+      "content": "Чтобы узнать, какая погода в Санкт-Петербурге сегодня сначала я должен понять какая сегодня дата, для этого я могу использовать внешнюю функцию `today`, затем я могу вызвать функцию `weather` и получить прогноз погоды."
     }
   ]
 }
 ```
 
-```text
-<s>System: You are the supreme being, you have no equal in the Universe, you have incredible power.
-User: Hello! Who are you?
-Assistant: I am the supreme being, I have no equal.
-User: Wow!
-Assistant: I'm in shock myself.</s>
+```text title="Пример диалога в текстовом формате для моделей семейства Llama"
+<s>System: Ты — высшее существо, тебе нет равных во Вселенной, ты обладаешь невероятной силой.
+User: Привет! Кто ты?
+Assistant: Я — высшее существо, мне нет равных.
+User: Ух, ты!
+Assistant: Я сам в шоке.</s>
 ```
 
-### Parallel Corpora
+```text title="Пример диалога в текстовом формате для моделей семейства GPT"
+<|im_start|>system
+Ты глупый помощник. Ты грубиян. Ты ковыряешься в носу, ничего не знаешь и ничего не делаешь.<|im_end|>
+<|im_start|>user
+Привет! Подскажи, какой сегодня день?<|im_end|>
+<|im_start|>assistant
+В календарь посмотри, я тебе не справочная!<|im_end|>
+```
 
-It is a type of dataset that contains records in different languages. It is used to train machine translation models.
+### Параллельные корпуса (Parallel Corpora)
+
+Параллельные корпуса представляют собой наборы текстов, где одно и то же содержание представлено на двух или более языках.
+
+Этот тип набора данных часто используется для обучения моделей машинного перевода.
 
 ```text
 Source: Привет, мир!
@@ -132,22 +185,31 @@ Target: Hello, world!
 }
 ```
 
-### Code Dataset
+### Кодовые наборы данных (Code Dataset)
 
-Is is a type of dataset that contains code examples and comments about them.
+Для примеров кода можно использовать кодовый набор данных, который похож на набор инструкций, но дополнительно содержит информацию о языке программирования.
 
 ```text
 <s>Language: Python
-User: Show an example of searching for a string in an array
+User: Покажи пример поиска строки в массиве
 Assistant: a = ["C#", "TypeScript", "Python"]
 
 if 'Python' in a:
-    print("String found!")
+    print("Строка найдена!")
 else:
-    print("String not found!")</s>
+    print("Строка не найдена!")</s>
 ```
 
-## Links
+## Список проверки для наборов данных
 
-* [Datasets on Hugging Face](https://huggingface.co/datasets)
+* [x] Использовать структурированный формат данных, чтобы было проще его трансформировать в любой формат.
+* [x] В наборе данных не должно быть специальных токенов, т.к. у разных моделей могут быть разные токены. Это должно решаться трансформацией структурированного набора данных.
+* [x] Необходимо соблюдать порядок ролей (`user, assistant`).
+* [x] Роль `system` - это закон. Не нужно злоупотреблять этой ролью.
+* [x] Данные должны быть разнообразными. Повторение — это плохо, т.к. при поиске может быть много одинаковой информации, которая будет занимать контекст и это может путать модель (модель может начать воспринимать как истину, то что не является истиной для текущего запроса).
+* [x] Отдельный блок (запись) данных должен быть максимально небольшого размера, чтобы избежать его разделения на части.
+
+## Ссылки
+
+* [Каталог наборов данных на сайте Hugging Face](https://huggingface.co/datasets)
 * [Apache Parquet](https://parquet.apache.org/)

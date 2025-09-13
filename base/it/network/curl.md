@@ -1,6 +1,6 @@
 ---
 title: cURL
-description: Questions and answers about using cURL.
+description: Вопросы и ответы по использованию cURL.
 tags:
   - cURL
   - FAQ
@@ -8,18 +8,18 @@ tags:
 
 # cURL
 
-**cURL** (Client for URL) - is a command-line tool for transferring data specified with URL syntax.
+**cURL** (Client for URL) — инструмент командной строки для передачи данных, указанных с помощью синтаксиса URL.
 
 * [https://curl.se](https://curl.se)
 * [https://github.com/curl/curl](https://github.com/curl/curl)
 
-## How to make requests using cURL?
+## Как делать запросы с помощью cURL?
 
 ```bash title="GET"
 curl https://example.org
 ```
 
-```bash title="GET with Authorization"
+```bash title="GET с авторизацией"
 curl --header "Authorization: Bearer <TOKEN HERE>" https://example.org
 ```
 

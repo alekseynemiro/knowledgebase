@@ -1,6 +1,6 @@
 ---
-title: Date & Time
-description: Operations with dates and time in Python.
+title: "Python: Date & Time"
+description: Операции с датами и временем в Python.
 tags:
   - Python
   - FAQ
@@ -8,7 +8,7 @@ tags:
 
 # Python: Date & Time
 
-## How to get date in JSON format (ISO 8601)?
+## Как получить дату в формате JSON (ISO 8601)?
 
 ```python
 from datetime import datetime
@@ -16,7 +16,7 @@ from datetime import datetime
 print(f"{datetime.now().strftime('%Y-%m-%dT%H:%M:%S.%f'}")
 ```
 
-## How to convert seconds to TimeSpan?
+## Как преобразовать секунды в TimeSpan?
 
 ```python
 from datetime import timedelta

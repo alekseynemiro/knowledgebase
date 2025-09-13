@@ -1,5 +1,6 @@
 ---
-description: Frequently occurring problems and solutions.
+title: "llama.cpp: Решение проблем"
+description: Часто встречающиеся проблемы и решения.
 tags:
   - llama.cpp
   - llama-cli
@@ -8,10 +9,10 @@ tags:
   - FAQ
 ---
 
-# Troubleshooting
+# Решение проблем с llama.cpp
 
 ## Error: File cublas64_12.dll not found
 
-[Download the required files](https://github.com/ggerganov/llama.cpp/releases) and copy them to the **llama.cpp** folder.
+[Скачайте необходимые файлы](https://github.com/ggerganov/llama.cpp/releases) и поместите в папку **llama.cpp**.
 
-![Windows: File cublas64_12.dll not found](assets/llama-cpp-cublas64_12_not-found.png)
+![Windows: Файл cublas64_12.dll не найден](assets/llama-cpp-cublas64_12_not-found.png)

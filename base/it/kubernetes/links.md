@@ -1,11 +1,12 @@
 ---
-title: Links
-description: Links to useful resources on Kubernetes.
+title: "Kubernetes: Ссылки"
+description: Ссылки на полезные ресурсы по Kubernetes.
 tags:
   - Links
+  - Ссылки
 ---
 
-# Links
+# Kubernetes: Ссылки
 
-* [Official website](https://kubernetes.io/)
-* [GitHub repo](https://github.com/kubernetes/kubernetes)
+* [Официальный сайт](https://kubernetes.io/)
+* [GitHub](https://github.com/kubernetes/kubernetes)

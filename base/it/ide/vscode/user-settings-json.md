@@ -1,6 +1,6 @@
 ---
-title: User settings
-description: Questions related to VS Code configuration.
+title: "VS Code: User settings"
+description: Вопросы, связанные с настройкой VS Code.
 tags:
   - VS Code
   - IDE
@@ -9,31 +9,31 @@ tags:
 
 # User settings (JSON)
 
-## How to open a settings file in JSON format?
+## Как открыть файл пользовательских настроек в формате JSON?
 
 `Ctrl + Shift + P` => Preferences: Open User Settings (JSON)
 
 ![Preferences: Open User Settings (JSON)](assets/user-settings.png)
 
-## How to enable/disable autosave?
+## Как включить/отключить автосохранение?
 
 ```json
 "files.autoSave": "onFocusChange",
 ```
 
-## How to set newline character?
+## Как установить символ перевода строки?
 
 ```json
 "files.eol": "\n",
 ```
 
-## How to enable the removal of trailing spaces?
+## Как включить удаление конечных пробелов?
 
 ```json
 "files.trimTrailingWhitespace": true,
 ```
 
-## How to prevent trailing spaces from being removed for Markdown files?
+## Как предотвратить удаление конечных пробелов в файлах Markdown?
 
 ```json
 "[markdown]": {
@@ -41,9 +41,9 @@ tags:
 },
 ```
 
-## How to remove the yellow frame highlighting of Russian letters (Unicode characters)?
+## Как убрать подсветку жёлтой рамкой русских букв (символов Unicode)?
 
-Add `ru` locale to the allowed list:
+Добавьте локаль `ru` в список разрешенных локалей:
 
 ```json
 "editor.unicodeHighlight.allowedLocales": {
@@ -53,7 +53,7 @@ Add `ru` locale to the allowed list:
 }
 ```
 
-Or add chars to the `allowedCharacters` list:
+Либо добавьте конкретные символы в список `allowedCharacters`:
 
 ```json
 "editor.unicodeHighlight.allowedCharacters": {
@@ -74,7 +74,7 @@ Or add chars to the `allowedCharacters` list:
 }
 ```
 
-Or disable the feature:
+Либо просто отключите этот функционал (не рекомендуется):
 
 ```json
 "editor.unicodeHighlight.ambiguousCharacters": false

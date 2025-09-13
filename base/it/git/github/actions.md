@@ -8,13 +8,13 @@ tags:
 
 # GitHub Actions
 
-## How to deploy a Node.js project to GitHub Pages?
+## Как развернуть в  GitHub Pages проект Node.js?
 
-There is no need to create additional branches.
+Нет необходимости создавать дополнительные ветки.
 
-- [x] Check `node-version` in `Setup Node.js`
-- [x] Check `run` in `Build website`
-- [x] Check `path` in `Upload artifact`
+- [x] Проверьте `node-version` в `Setup Node.js`
+- [x] Проверьте `run` в `Build website`
+- [x] Проверьте `path` в `Upload artifact`
 
 ```yaml title=".github/workflows/deploy-gh-pages.yaml"
 name: Deploy Node.js project

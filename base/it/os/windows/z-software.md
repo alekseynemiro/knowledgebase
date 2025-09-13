@@ -1,25 +1,29 @@
 ---
 slug: software
-title: Software
-description: Software for Windows
+title: "Windows: Каталог программ"
+description: Программное обеспечение для Windows
 tags:
   - Software
   - Windows
   - Links
+  - Ссылки
+  - Софт
+  - ПО
+  - Программное обеспечение
 ---
 
-# Software for Windows
+# Каталог программ для Windows
 
 ## 3D
 
-* [Blender](https://www.blender.org/)
+* [Blender](https://www.blender.org/) — лучший бесплатный 3D-редактор, альтернатива Autodesk 3ds Max
 
-## Audio
+## Аудио и звук
 
-* [Audacity](https://www.audacityteam.org)
-* [ASIO4ALL](https://asio4all.org)
+* [Audacity](https://www.audacityteam.org) — отличный и полностью бесплатный аудио-редактор, как альтернатива платному Sound Forge
+* [ASIO4ALL](https://asio4all.org) — виртуальный драйвер ASIO (Audio Stream Input/Output)
 
-## IDEs
+## Среды разработки (IDE)
 
 * [Android Studio](https://developer.android.com/studio)
 * [Rider](https://www.jetbrains.com/rider/)
@@ -28,42 +32,41 @@ tags:
 
 ## Git
 
-* [Git Extensions](https://gitextensions.github.io/)
-* [TortoiseGit](https://tortoisegit.org/)
+* [TortoiseGit](https://tortoisegit.org/) — неплохой бесплатный клиент для Git с интеграцией в проводник Windows
 
-## Graphics
+## Графика
 
-* [Inkscape](https://inkscape.org/)
-* [GIMP](https://www.gimp.org)
+* [Inkscape](https://inkscape.org/) — векторный редактор
+* [GIMP](https://www.gimp.org) — растровый редактор
 
-## File archivers
+## Архиваторы
 
 * [7-Zip](https://7-zip.org/download.html)
 
-## Media players
+## Видеопроигрыватели
 
-* [VLC](https://www.videolan.org/vlc/)
+* [VLC](https://www.videolan.org/vlc/) — популярный бесплатный медиапроигрыватель
 
-## Network
+## Сеть
 
-* [Nmap](https://nmap.org/)
-* [PuTTY](https://www.putty.org/)
-* [WireGuard](https://www.wireguard.com/)
+* [Nmap](https://nmap.org/) — утилита для анализа сети
+* [PuTTY](https://www.putty.org/) — SSH-клиент
+* [WireGuard](https://www.wireguard.com/) — VPN
 
-## Screen capture
+## Захват экрана
 
 * [FoxTools Screen Shooter](https://github.com/foxtools-ru/screen-shooter)
 * [ScreenToGif](https://github.com/NickeManarin/ScreenToGif)
 
-## Office
+## Офисные приложения
 
-* [LibreOffice](https://www.libreoffice.org/)
-* [Scrivener](http://www.literatureandlatte.com/scrivener.php)
+* [LibreOffice](https://www.libreoffice.org/) — какая-никакая замена платному Microsoft Office
+* [Scrivener](http://www.literatureandlatte.com/scrivener.php) — написание сценариев, книг (стоит денег)
 * [Pencil](https://pencil.evolus.vn/)
 
-## Utilities
+## Утилиты
 
-* [Non-Sucking Service Manager (NSSM)](https://nssm.cc/)
-* [Process Explorer](https://learn.microsoft.com/en-us/sysinternals/downloads/process-explorer)
-* [Process Monitor](https://learn.microsoft.com/en-us/sysinternals/downloads/procmon)
-* [WinDirStat](https://windirstat.net/)
+* [Non-Sucking Service Manager (NSSM)](https://nssm.cc/) — превращение любых приложений в службы Windows
+* [Process Explorer](https://learn.microsoft.com/en-us/sysinternals/downloads/process-explorer) — продвинутый инструмент просмотра активности процессов
+* [Process Monitor](https://learn.microsoft.com/en-us/sysinternals/downloads/procmon) — инструмент анализа процессов (использование файловой системы, памяти, сети и т.п.)
+* [WinDirStat](https://windirstat.net/) — поиск свободного места на диске

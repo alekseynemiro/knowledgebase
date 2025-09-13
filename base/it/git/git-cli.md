@@ -9,167 +9,189 @@ tags:
 
 # Git CLI
 
-## How to create a new repository in a folder?
+## Как создать новый репозиторий в текущей папке?
 
 ```bash
 git init
 ```
 
-## How to bind a local repository to a remote one?
+## Как привязать локальный репозиторий к удаленному?
 
 ```bash
 git remote add origin https://git.exmple.org/repo.git
 ```
 
-## How to clone a remote repository?
+## Как клонировать/извлечь удаленный репозиторий?
 
-```bash title="Clone the master branch"
+```bash title="Клонировать ветку master"
 git clone https://github.com/alekseynemiro/knowledgebase.git
 ```
 
-```bash title="Clone a specific branch"
+```bash title="Клонировать определенную ветку"
 git clone -b <branch_name> <repo_url>
 ```
 
-## How to get a list of branches from a remote repository?
+## Как получить список веток из удаленного репозитория?
 
 ```bash
 git fetch --all
 ```
 
-## How to check the status of the current branch?
+## Как проверить статус текущей ветки?
 
 ```bash
 git status
 ```
 
-## How to display the name of the current branch?
+## Как отобразить название текущей ветки?
 
-```bash title="Current branch"
+```bash title="Имя текущей ветки"
 git branch --show-current
 ```
 
-```bash title="List of all branches"
+```bash title="Список всех веток"
 git branch
 ```
 
-## How to create a new branch?
+## Как создать новую ветку?
 
-```bash title="Create a new branch"
+```bash title="Создать новую ветку"
 git branch <branch_name>
 ```
 
-```bash title="Create a new branch and switch to it"
+```bash title="Создать новую ветку и переключиться на неё"
 git checkout -b <branch_name>
 ```
 
-## How to switch to a branch?
+## Как переключиться на ветку?
 
 ```bash
 git checkout <branch_name>
 ```
 
-## How to get changes from a remote repository?
+## Как получить изменения из удаленного репозитория?
 
-```bash title="Current branch"
+```bash title="Из текущей ветки"
 git pull
 ```
 
-```bash title="Specific branch"
+```bash title="Из определённой ветки"
 git pull origin <branch_name>
 ```
 
-## How to make a commit?
+## Как зафиксировать изменения (сделать коммит)?
 
-In most cases, it is enough to simply commit all changes:
+В большинстве случаев достаточно просто зафиксировать все изменения:
 
-```bash title="Commit changes"
+```bash title="Фиксация изменений"
 git commit -m "Commit message"
 ```
 
-If you need to add changes to the index:
+Если необходимо внести изменения в индекс:
 
-```bash title="Add changes to index"
+```bash title="Добавить файл или папку в индекс"
 git add <file_or_dir_path>
 ```
 
-* `<file_or_dir_path>` - you can use wildcard. For example, `git add *.ts`.
+* `<file_or_dir_path>` — допустимо использовать шаблон в формате wildcard. Например — `git add *.ts`.
 
 ```bash title="Add all changes and ignore new files"
 git add -A .
 ```
 
-## How to push changes to a remote repository?
+## Как отправить изменения в удаленный репозиторий?
 
-```bash title="Current branch"
+```bash title="Отправить в текущую ветку"
 git push
 ```
 
-```bash title="Specific target branch"
+```bash title="Отправить в определённую ветку"
 git push origin <target_branch_name>
 ```
 
-If the target branch does not exist, it will be created automatically.  
-To tracking branch, use the `--set-upstream` (`-u`) flag:
+Если целевая ветка не существует, она будет создана автоматически.  
+Для отслеживания ветки используйте флаг `--set-upstream` (`-u`):
 
 ```bash
 git push --set-upstream origin <target_branch_name>
 ```
 
-Push all local branches and add tracking:
+Отправить изменения для всех веток и подключить отслеживание для этих веток:
 
 ```bash
 git push --all --set-upstream origin
 ```
 
-## How to delete a branch?
+## Как удалить ветку?
 
-```bash title="Delete local branch"
+```bash title="Удалить локальную ветку"
 git branch -d <branch_name>
 ```
 
-```bash title="Delete remote brach"
+```bash title="Удалить удаленную ветку"
 git push -d origin <branch_name>
 ```
 
-You can use flag `-f` to force delete.
+Для принудительного удаления можно использовать флаг `-f`.
 
-## How to create and push a tag?
+## Как создать метку (тег)?
 
-The following example creates and pushes a "v1.0" tag to the latest commit:
+В следующих примерах показано создание метки для последней фиксации (последнего коммита):
 
-```bash
-git tag v1.0 && git push origin tag v1.0
+```bash title="Создать новую метку"
+git tag v1.0
 ```
 
-```bash title="With a message"
+```bash title="Создать новую метку с сообщением"
 git tag -a <tag_name> -m '<tag_message>'
-git push origin tag <tag_name>
 ```
 
-## How to delete a tag?
+## Как отправить метку (тег) на удаленный сервер?
 
-```bash title="Delete from local"
+```bash title="Отправить метку v1.0"
+git push origin tag v1.0
+```
+
+## Как удалить метку (тег)?
+
+```bash title="Удалить метку локально"
 git tag -d <tag_name>
 ```
 
-```bash title="Delete from remote repository"
+```bash title="Удалить метку из удаленного репозитория"
 git push origin -d <tag_name>
 ```
 
-## What is `origin`?
+## Как переименовать метку (тег)?
 
-`origin` is the default name for the remote repository.
+Изменение имени тегов в **git** как такого нет. Есть обходной путь — создать новую метку со ссылкой на старую и затем удалить старую метку:
 
-## How to get the latest commit hash, date and branch name in one line?
+```bash
+git tag new old
+git tag -d old
+git push origin new
+git push origin -d old
+```
 
-This can be useful for generating a version number.
+## Как удалить из локального репозитория несуществующие в удалённом репозитории метки (теги)?
+
+```bash
+git fetch --prune-tags
+```
+
+## Что такое `origin`?
+
+`origin` — имя удаленного репозитория по умолчанию.
+
+## Как получить хэш последнего коммита, дату и имя ветки в одной строке?
+
+Это может быть полезно для генерации номера версии.
 
 ```bash
 git log -1 --pretty='%H;%aI;%D'
 ```
 
-## How to check if a commit has a signature (gpg)?
+## Как проверить, имеет ли коммит подпись (gpg)?
 
 ```bash
 git verify-commit <commit_hash>

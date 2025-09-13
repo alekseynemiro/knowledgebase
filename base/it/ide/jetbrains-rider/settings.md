@@ -1,19 +1,21 @@
 ---
-title: Settings
-description: JetBrains Rider configuration related questions.
+title: "JetBrains Rider: Настройки"
+description: Вопросы, связанные с конфигурацией JetBrains Rider.
 tags:
   - Rider
   - IDE
   - FAQ
+  - Settings
+  - Настройки
 ---
 
-# JetBrains Rider Settings
+# JetBrains Rider: Настройки
 
-## How to reset git password?
+## Как сбросить пароль git?
 
-1. Simply disable password saving and restart Rider.
-2. Perform any operation that requires entering the git password.
-3. Enable password saving back.
+1. Просто отключите сохранение паролей и перезапустите **Rider**.
+2. Выполните любые операции, требующие ввода пароля **Git**.
+3. Включите сохранение паролей.
 
 `File | Settings | Appearance & Behavior | System Settings | Passwords`
 

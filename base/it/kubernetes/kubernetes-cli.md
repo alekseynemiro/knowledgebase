@@ -6,19 +6,21 @@ tags:
   - Kubernetes
   - CI/CD
   - DevOps
+  - Развертывание
+  - Автоматизация
 ---
 
 # Kubernetes CLI
 
-## How to restart Pod?
+## Как перезапустить POD?
 
-You need to delete the POD and it will be automatically created again:
+Для перезапуска **POD** его необходимо удалить, он будет перезапущен автоматически:
 
 ```bash
 kubectl delete pods ${POD_NAME}
 ```
 
-## How to view pod logs?
+## Как посмотреть журнал указанного POD?
 
 ```bash
 kubectl logs ${POD_NAME}
@@ -28,25 +30,25 @@ kubectl logs ${POD_NAME}
 kubectl logs ${POD_NAME} -c ${CONTAINER_NAME}
 ```
 
-## How to display a list of services?
+## Как посмотреть список сервисов?
 
 ```bash
 kubectl get services
 ```
 
-## How to display a list of pods?
+## Как посмотреть список модулей (PODs)?
 
 ```bash
 kubectl get pods
 ```
 
-## How to display a list of deployments?
+## Как посмотреть список развертываний?
 
 ```bash
 kubectl get deployments
 ```
 
-## How to execute a command in a container?
+## Как выполнить команду в контейнере?
 
 ```bash
 kubectl exec --stdin --tty ${POD_NAME} -- /bin/sh

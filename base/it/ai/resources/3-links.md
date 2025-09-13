@@ -1,15 +1,16 @@
 ---
 slug: links
-title: Links
-description: Links to useful resources on AI and Machine Learning.
+title: Ссылки по ИИ
+description: Ссылки на полезные ресурсы по ИИ и машинному обучению.
 tags:
   - Links
+  - Ссылки
 ---
 
-# Links
+# Ссылки на ресурсы по ИИ
 
-* [Hugging Face](https://huggingface.co/) - AI community
+* [Hugging Face](https://huggingface.co/) — ИИ сообщество
 * [Open LLM Leaderboard](https://huggingface.co/spaces/open-llm-leaderboard/open_llm_leaderboard)
-* [Google Colaboratory](https://colab.research.google.com/) - Python fiddle
-* [GPTQ](https://github.com/IST-DASLab/gptq) - custom quantization
+* [Google Colaboratory](https://colab.research.google.com/) — Python fiddle
+* [GPTQ](https://github.com/IST-DASLab/gptq) — пользовательское квантование
 * [Russian GPT3 models](https://github.com/ai-forever/ru-gpts)

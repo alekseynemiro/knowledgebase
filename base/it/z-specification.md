@@ -1,56 +1,60 @@
 ---
 slug: specification
+description: Спецификация и стандарты раздела IT базы знаний.
 tags:
   - Formats
   - LLM
   - Large Language Models
   - Machine Learning
   - AI
-  - Datasets
+  - Dataset
   - RAG
   - Fine-Tuning
+  - Машинное обучение
+  - Большие языковые модели
+  - ИИ
+  - Набор данных
+  - Спецификация
 ---
 
-# Specification
+# Спецификация
 
-*Last Updated: 2025-01-24*
+*Обновлено: 2025-01-24*
 
 :::note
-
-This information can be useful for building a dataset for language models.
-
+Эта информация может быть полезна для создания набора данных для языковых моделей.
 :::
 
-The IT section uses the following tags and data format:
+В разделе "Информационные технологии" используются следующие теги и форматы данных:
 
-* **[Glossary](/tags/glossary)** - an alphabetical list of words relating to a specific subject.  
-  It is permissible to use multi-line definitions.
+* **[Glossary](/tags/glossary)** — алфавитный список слов, относящихся к определённой теме.
+Допускается использование многострочных определений.
   
   ```md
-  * **Term 1** - Definition
-  * **Term 2** - Definition Line 1<Space><Space>
-  Definition line 2
-  * **Term 3** - Definition
+  * **Термин 1** — определение
+  * **Термин 2** — определение, строка 1<Space><Space>
+  Определение, строка 2
+  * **Термин 3** — определение
   ```
 
-* **[FAQ](/tags/faq)** - question-answer data format:
+* **[FAQ](/tags/faq)** — формат данных вопрос-ответ:
 
   ```md
-  ## Question
+  ## Вопрос
 
-  Answer
+  Ответ
   ```
 
-* **[Links](/tags/links)** - list of links:
+* **[Links](/tags/links)** — список ссылок:
 
   ```md
-  * [Text](https://example.org/) - description.
+  * [Текст](https://example.org/) — описание (опционально).
   ```
 
-  May have categories:
+  Список ссылок может иметь категории:
 
   ```md
-  ## Category
+  ## Категория
 
-  * [Text](https://example.org/) - description.
+  * [Текст](https://example.org/) — описание (опционально).
   ```

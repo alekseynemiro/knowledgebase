@@ -1,7 +1,7 @@
 ---
 slug: hardware
-title: Hardware
-description: Notes on hardware for creating and using AI.
+title: Железо для ИИ
+description: Небольшие заметки об аппаратном обеспечении для создания и использования ИИ.
 tags:
   - Hardware
   - AI
@@ -14,34 +14,34 @@ tags:
   - VRAM
   - HDD
   - SSD
+  - ИИ
+  - Большие языковые модели
+  - Железо
 ---
 
-# Hardware
+# Железо для ИИ
 
-There are two main areas of work with LLMs: **[Inference](../llm/glossary.md)** and **[Fine-Tuning](../llm/glossary.md)**.
+Существует два основных направления работы с большими языковыми моделями (LLM): **[Inference](../llm/glossary.md)** (генерация, вывод) и **[Fine-Tuning](../llm/glossary.md)** (тонкая настройка, обучение).
 
-If for Inference the amount of resources has a greater impact on the comfortable speed and accuracy of the models,
-then for Fine-Tuning the requirements are higher, especially for the GPU.
+Если для генерации (inference) количество ресурсов больше влияет на комфортную скорость и точность моделей, то для **Fine-Tuning** требования гораздо выше, особенно к **GPU**.
 
-[llama.cpp](../llm/llama-cpp) allows to use CPU and RAM if GPU resources are insufficient.
+[llama.cpp](../llm/llama-cpp) позволяет использовать процессор (**CPU**) и оперативную память (**RAM**), если ресурсов графического процессора (**GPU**) недостаточно.
 
-GPUs preferred over CPUs.
+GPU предпочтительнее CPU. Во всех случаях, чем больше ресурсов, тем лучше.
 
-In all cases, the more resources the better.
+В идеале, лучше использовать профессиональное оборудование, потому что оно предназначено для длительной безотказной работы на высоких нагрузках.
 
-Ideally, use professional hardware. Because it is a more reliable solution.
+## GPU (Graphics processing unit — графический процессор)
 
-## GPU (Graphics processing unit)
+По состоянию на 2025 год продукция **NVIDIA** будет предпочтительнее во всех случаях.
 
-As of 2025, NVIDIA products are preferable in all cases.
+Особое внимание следует уделить следующим моментам:
 
-Pay attention to the following:
+* **Tensor cores** (тензорные ядра) — специальные ядра, обеспечивающие динамические вычисления и вычисления со смешанной точностью.
+* **CUDA** (**Compute Unified Device Architecture**) ядра — специализированные ядра, предназначенные для параллельных вычислений.
+* **Video Random Access Memory** (**VRAM**) — 16/24 GB или больше.
 
-* Tensor cores - are specially cores that enable dynamic calculations and mixed-precision computing.
-* CUDA (Compute Unified Device Architecture) cores - are specialized cores designed for parallel computing.
-* Video Random Access Memory (VRAM) - 16/24 GB or more.
+Также обратите внимание на следующее:
 
-Also pay attention to the following:
-
-* Power consumption.
-* Heat dissipation system.
+* Потребляемая мощность.
+* Система отвода тепла.

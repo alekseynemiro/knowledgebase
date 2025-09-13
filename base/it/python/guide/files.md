@@ -1,35 +1,35 @@
 ---
-title: Files & Folders
-description: Operations with files and folders in Python.
+title: "Python: Files & Folders"
+description: Операции с файлами и папками в Python.
 tags:
   - Python
   - FAQ
 ---
 
-# Python: Operations with files and folders
+# Python: Операции с файлами и папками
 
-## How to create an empty file?
+## Как создать пустой файл?
 
 ```python
 with open("example.txt", "w"):
     pass
 ```
 
-## How to overwrite a text file?
+## Как перезаписать текстовый файл?
 
 ```python
 with open("example.txt", "w") as file:
     file.write("Data")
 ```
 
-## How to append data to the end of a text file?
+## Как добавить данные в конец текстового файла?
 
 ```python
 with open("example.txt", "a") as file:
     file.write("\nNew line of data")
 ```
 
-## How to check if a file exists?
+## Как проверить существование файла?
 
 ```python
 import os
@@ -40,7 +40,7 @@ else:
     print("The file does not exist")
 ```
 
-## How to read a text file?
+## Как прочитать текстовый файл?
 
 ```python
 with open("example.txt", "r") as file:
@@ -48,7 +48,7 @@ with open("example.txt", "r") as file:
     print(content)
 ```
 
-## How to read a large text file line by line?
+## Как прочитать большой текстовый файл построчно?
 
 ```python
 with open("example.txt", "r", encoding="UTF-8") as file:
@@ -56,7 +56,7 @@ with open("example.txt", "r", encoding="UTF-8") as file:
         print(line.rstrip())
 ```
 
-## How to copy a file?
+## Как скопировать файл?
 
 ```python
 import shutil
@@ -64,7 +64,7 @@ import shutil
 shutil.copy('source.txt', 'destination.txt')
 ```
 
-## How to move a file?
+## Как переместить файл?
 
 ```python
 import shutil
@@ -72,7 +72,7 @@ import shutil
 shutil.move('source.txt', 'destination.txt')
 ```
 
-## How to delete a file?
+## Как удалить файл?
 
 ```python
 import os
@@ -80,7 +80,7 @@ import os
 os.remove("example.txt")
 ```
 
-## How to create a new folder?
+## Как создать новую папку?
 
 ```python
 import os
@@ -91,7 +91,7 @@ os.mkdir("new_folder")
 os.makedirs("parent/child/child_2", exist_ok=True)
 ```
 
-## How to get a list of files in a folder?
+## Как получить список файлов в папке?
 
 ```python
 import os
@@ -113,7 +113,7 @@ for root, dirs, files in os.walk("folder_path"):
 print(all_files)
 ```
 
-## How to delete a folder?
+## Как удалить папку?
 
 ```python
 import os
@@ -127,7 +127,7 @@ import shutil
 shutil.rmtree("folder_path")
 ```
 
-## How to find files?
+## Как найти файлы?
 
 ```python
 import glob
@@ -137,7 +137,7 @@ text_files = glob.glob("*.txt")
 print(text_files)
 ```
 
-## How to merge text files into one?
+## Как объединить текстовые файлы в один?
 
 ```python
 import glob
@@ -150,7 +150,7 @@ with open(".output/result.md", "wb") as output:
             output.write(reader.read())
 ```
 
-## How to get current directory?
+## Как получить текущий рабочий каталог?
 
 ```python
 import os
@@ -159,7 +159,7 @@ print(f"Current work directory: {os.getcwd()}")
 print(f"Current file directory: {os.path.dirname(os.path.realpath(__file__))}")
 ```
 
-## How to combine path components?
+## Как объединить компоненты пути?
 
 ```python
 import os
@@ -167,7 +167,13 @@ import os
 print(os.path.join("/home/user", "example.txt"))
 ```
 
-## How to get absolute path from relative?
+## Как нормализовать слэши в пути?
+
+```python
+print(os.path.normpath("C:\\Projects/example/folder"))
+```
+
+## Как получить абсолютный путь из относительного?
 
 ```python
 import os

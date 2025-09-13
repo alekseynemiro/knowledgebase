@@ -1,17 +1,18 @@
 ---
-title: Standards
-description: Python Coding Standards.
+title: "Python: Стандарты"
+description: Стандарты кодирования Python.
 tags:
   - Python
   - Guide
   - Code style
+  - Стандарты кодирования
 ---
 
-# Python: Standards
+# Python: Стандарты
 
-The example below covers the basics of code formatting in Python.
+В примере ниже показаны основы форматирования кода в Python.
 
-* [x] Use lowercase and underscores for file and folder names.
+* [x] Для имен файлов и папок используйте строчные буквы и символ подчеркивания для разделения слов.
 
 ```python hello_world.py
 class UsePascalCaseName:

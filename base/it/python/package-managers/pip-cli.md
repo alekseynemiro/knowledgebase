@@ -7,9 +7,11 @@ tags:
   - FAQ
 ---
 
-**Pip** is the standard package management tool for Python, used to install and manage libraries from the PyPI (Python Package Index).
+# Pip CLI
 
-## How to use pip?
+**Pip** — стандартный инструмент управления пакетами в **Python**, используемый для установки и управления библиотеками из **PyPI** (**Python Package Index**).
+
+## Как использовать pip?
 
 ```bash
 pip --version
@@ -23,7 +25,7 @@ python -m pip --version
 python3 -m pip --version
 ```
 
-## How to install a package?
+## Как установить пакет?
 
 ```bash
 pip install package_name
@@ -33,42 +35,42 @@ pip install package_name
 pip install package_name --upgrade --force-reinstall --no-cache-dir
 ```
 
-## How to upgrade a package?
+## Как обновить пакет?
 
 ```bash
 pip install --upgrade package_name
 ```
 
-## How to uninstall a package?
+## Как удалить пакет?
 
 ```bash
 pip uninstall package_name
 ```
 
-## How to view the list of installed packages?
+## Как посмотреть список установленных пакетов?
 
 ```bash
 pip list
 ```
 
-## How to get detailed information about a specific package?
+## Как получить детальную информацию о пакете?
 
 ```bash
 pip show package_name
 ```
 
-## How to restore packages from a requirements.txt file?
+## Как восстановить пакеты из файла requirements.txt?
 
 ```bash
 pip install -r requirements.txt
 ```
 
-## How to create requirements.txt file?
+## Как создать файл requirements.txt?
 
 ```bash
 pip freeze > requirements.txt
 ```
 
 :::note
-Note that this command will list all installed packages, including those that are probably not used.
+Обратите внимание, что эта команда выведет список всех установленных пакетов, включая те, которые, вероятно, не используются.
 :::

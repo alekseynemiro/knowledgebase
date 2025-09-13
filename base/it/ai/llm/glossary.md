@@ -1,79 +1,83 @@
 ---
-title: Glossary
-description: Glossary of terms related to LLMs.
+title: "LLM: Глоссарий"
+description: Глоссарий терминов, связанных с LLM.
 tags:
   - Glossary
   - LLM
   - Large Language Models
   - Machine Learning
   - AI
+  - Глоссарий
+  - Большие языковые модели
+  - Машинное обучение
+  - ИИ
 ---
 
-# Glossary
+# LLM: Глоссарий
 
-* **ALBERT** (A Lite BERT) - type of large language model, smaller version of BERT that is optimized to train more efficiently while maintaining performance.
-* **Accuracy** - is a metric that measures how often a machine learning model correctly predicts the outcome. It is calculated as the ratio of correctly predicted instances to the total number of instances in the dataset.
-* **Action** - an agent's decision based on the current state of the environment.
-* **Agent** - an entity that makes a decision based on data received from the environment.
-* **Annotated Dataset** - is a type of text dataset that contains special markup so that models understand how to interpret the data.
-* **BERT** (Bidirectional Encoder Representations from Transformers) - type of large language model on the transformer architecture, which is based on the principle of preliminary training of the model on large text corpora for subsequent fine-tuning for specific tasks.
-* **Beginning Of Sentence** (bos) - is a special token that marks the beginning of a sentence. For Llama realm models is `<s>`.
-* **Code Dataset** - is a type of dataset that contains code examples and comments about them.
-* **Corpus** - is a large and structured set of texts used to train large language models.
-* **Dataset** - is a collection of organized data. Datasets can be represented in various formats, such as tables (e.g. CSV files), databases, or specialized data formats.
-* **Dialogue Dataset** - is a type of dataset that contains conversations between two or more participants.
-* **ELECTRA** - type of large language model, instead of masking tokens (words) like BERT, it uses a discriminative learning approach for more efficient pre-training.
-* **Embedding** - vector representations of words, phrases, or sentences that capture their meanings and are used in various natural language processing tasks.
-* **End Of Sentence** (eos) - is a special token that marks the end of a sentence. For Llama realm models is `</s>`.
-* **Environment** - this is the world with which the agent interacts, to which the environment provides information about its current state and changes the state in response to the agent's actions.
-* **F1 Score** - a metric used to evaluate the performance of a classification model, especially for imbalanced datasets; it is the harmonic mean of precision and recall.
-* **FAISS** (Facebook AI Similarity Search) - an efficient similarity search and clustering library developed by Facebook for finding similar vectors in large datasets.
-* **Fine-Tuning** - the process of adapting a pre-trained language model. See also IFT.
-* **GGUF** (GGML Universal File) - binary file format to store tensors and model metadata for llama.cpp.
-* **GPT** (Generative Pre-trained Transformer) - type of large language model based on the transformer deep learning architecture, pre-trained on large data sets, and able to generate novel human-like content.
-* **Goal** - a long-term goal that the agent seeks to achieve.
-* **HNSW** (Hierarchical Navigable Small World) - a data structure to efficiently perform approximate nearest neighbor searches in high dimensions.
-* **IFT** (Instruction Fine-Tuning) - the process of adapting a pre-trained language model to follow specific instructions or tasks, improving its performance on those tasks.
-* **IVF** (Inverted Index, or Inverted File) - a data structure used in information retrieval that allows for efficient searching of documents containing specific words.
-* **IVFPQ** (IVF with Product Quantization) - is a composite index that combines inverted file index (IVF) and product quantization (PQ) for reducing storage and increasing efficiency.
-* **Inference** - the process of obtaining predictions from a trained model. Simply put, it is communication with the model.
-* **Instructional Dataset** (instruct) - is a type of dataset that contains commands or instructions for a model to perform a specific actions.
-* **LLM** (Large Language Model) - a type of neural network designed to understand, generate, and manipulate human language by predicting the likelihood of sequences of words. Typically, large models use large datasets obtained from publicly sources, including the Internet.
-* **LangChain** - is a software framework that helps facilitate the integration of large language models (LLMs) into applications.
-* **LangGraph** - is a library for building stateful, multi-actor applications with LLMs, used to create agent and multi-agent workflows.
-* **Llama** (Large Language Model Meta AI, aka LLaMA) - is a family of autoregressive large language models (LLMs) released by Meta AI starting in February 2023.
-* **Llama.cpp** - open source software library that performs inference on various large language models such as Llama.
-* **Min P** - sampling method considers the possibility of including words with a probability of at least P. Used as a complement to Top K and Top P.
-* **NLP** (Natural Language Processing) - a field of artificial intelligence focused on the interaction between computers and humans through natural language, enabling machines to understand, interpret, and generate human languages.
-* **PEFT** (Parameter-Efficient Fine-Tuning) - is a method for adapting pre-trained models with minimal changes to model parameters, making fine-tuning more efficient and less resource-intensive.
-* **Padding** (pad) - special token for unifying the length of a sequence in a batch.
-* **Parallel Corpora** - is a type of dataset that contains records in different languages. It is used to train machine translation models.
-* **Parameters** - the variables that the model learns during training.
-* **Perplexity** - measures how well a language model predicts a text sample. The lower the perplexity value, the better the model reflects the specified text.
-* **Policy** - is the agent's strategy, which determines what actions it chooses depending on the state of the environment.
-* **Precision** - is a metric that estimates what proportion of all objects that the algorithm classified as positive are actually positive.
-* **Prompt Engineering** - is the process of structuring or creating instructions in order to obtain the best possible output from large language models.
-* **Prompt Tuning** - is an approach to customizing the behavior of a model by changing the prompt.
-* **Prompt** - represents the stimulus or input provided to the model to generate a response or text. Prompt can contain context that will help the model better understand what is being said.
-* **Quantization** - in language models, this is the process of limiting the rounding of numbers to reduce the amount of RAM consumed. The lower the value, the faster the work, but the less accurate the result.
-* **RAG** (Relative-Augmented Generation) - is a technique that grants generative artificial intelligence models information retrieval capabilities by integrating external retrieval systems, improving their context and relevance.
-* **Recall** - a metric that measures the proportion of actual positive cases that were correctly identified by the model.
-* **Reinforcement Learning Environment** (RL, Reinforcement Learning) - is an area of ​​machine learning where an agent learns to interact with  environment to achieve a specific goal based on reward feedback.
-* **Reward** - feedback that the agent receives after performing an action. This can be either a positive (for correct actions) or a negative (for incorrect actions) value.
-* **RoBERTa** (A Robustly Optimized BERT Pre-training Approach) - type of large language model, improved version of BERT, with more rigorous and optimized training conditions.
-* **RoPE** (Rotary Position Embedding) - method for adding positional information to data sequences, used in transformer models.
-* **SFT** (Supervised Fine-Tuning) - the process of adapting a pre-trained model on labeled data to improve its performance for specific tasks by fine-tuning it with supervised learning techniques.
-* **Sampling** - used to reduce data volumes without losing information.
-* **Separator** (sep) - a special separator token to separate multiple answer options for the same question.
-* **Supervised Learning Dataset** - is Instructional Dataset.
-* **T5** (Text-to-Text Transfer Transformer) - type of large language model to transform text into text.
-* **Temperature** - is a parameter used during text generation to control randomness. It adjusts the probability distribution over possible next words: lower temperatures make the model more deterministic and conservative, while higher temperatures encourage diversity and creativity in outputs by making less likely predictions more probable. It is not recommended to use the value `0.0` and `1.0`, because the result may be unexpected.
-* **Text corpora** - a large collection of text data merged together, which is typically used to train models in the early stages of their lives.
-* **Token** (code) - the basic unit of input and output in a language model. Token typically represent word, subword, or character.
-* **Top K** - sampling method limits the choice of predicted words to only the most probable variants from the distribution. The lower the value, the worse the result.
-* **Top P** (nucleus sampling) - sampling method includes all words with a cumulative probability greater than or equal to a given threshold P. The lower the value, the worse the result.
-* **Transfer Learning** - training a model based on previous experience.
-* **Transformer** - deep learning architecture that was developed by researchers at Google and is based on the multi-head attention mechanism. Text is converted to numerical representations called tokens, and each token is converted into a vector via lookup from a word embedding table.
-* **Unknown** (unk) - a special token that represents an unknown or rarely encountered word. For Llama family is `<unk>`.
-* **Vectorization** - the process of converting text into numerical vectors that can then be indexed and used for fast searching.
-* **Weight** - numerical coefficients describing the work of each neuron in the network.
+* **ALBERT** (A Lite BERT) — уменьшенная версия BERT, оптимизированная для более эффективного обучения с сохранением производительности.
+* **Accuracy** — метрика, измеряющая частоту правильного прогнозирования результата моделью. Она рассчитывается как отношение количества правильно предсказанных случаев к общему количеству случаев в наборе данных.
+* **Action** (действие) — решение агента, основанное на текущем состоянии окружения (environment).
+* **Agent** (агент) — это сущность, которая взаимодействует с большой языковой моделью и оценивает корректность полученного ответа. При необходимости корректирует модель для получения желаемого результата.
+* **Annotated Dataset** — это тип текстового набора данных, который содержит специальную разметку, позволяющую моделям понимать, как интерпретировать данные.
+* **BERT** (Bidirectional Encoder Representations from Transformers) — тип большой языковой модели на архитектуре трансформатора (transformer), в основе которой лежит принцип предварительного обучения модели на больших текстовых корпусах для последующей тонкой настройки под конкретные задачи.
+* **Beginning Of Sentence** (BOS) — это специальный токен, обозначающий начало предложения. Для моделей семейства Llama — `<s>`.
+* **Code Dataset** — это тип набора данных, содержащий примеры кода и комментарии к ним.
+* **Corpus** (корпус) — это большой и структурированный набор текстов, используемый для обучения больших языковых моделей.
+* **Dataset** (набор данных) — совокупность упорядоченных данных. Наборы данных могут быть представлены в различных форматах, таких как таблицы (например, CSV-файлы), базы данных или специализированные форматы данных.
+* **Dialogue Dataset** — это тип набора данных, содержащий беседы между двумя или более участниками.
+* **ELECTRA** — тип большой языковой модели, в которой вместо маскировки токенов (слов) используется дискриминационный подход к обучению.
+* **Embedding** (внедрение, встраивание) — внедрение в модель данных.
+* **End Of Sentence** (EOS) — это специальный токен, обозначающий конец предложения. Для моделей семейства Llama — `</s>`.
+* **Environment** (окружение, окружающая среда) — внешний мир, с которым взаимодействует агент (agent).
+* **F1 Score** — метрика, используемая для оценки эффективности модели классификации, особенно для несбалансированных наборов данных; это среднее гармоническое значение точности и полноты.
+* **FAISS** (Facebook AI Similarity Search) — легковесная векторная база данных, разработанная Facebook.
+* **Fine-Tuning** — процесс адаптации предварительно обученной языковой модели. См. также IFT.
+* **GGUF** (GGML Universal File) — двоичный формат файла для хранения тензоров и метаданных модели для llama.cpp.
+* **GPT** (Generative Pre-trained Transformer) — тип большой языковой модели, основанной на архитектуре глубокого обучения Transformer, предварительно обученной на больших наборах данных и способной генерировать человекоподобный контент.
+* **Goal** — долгосрочная цель, которую агент (agent) стремится достичь.
+* **HNSW** (Hierarchical Navigable Small World) — структура данных для эффективного выполнения приблизительного поиска ближайшего соседа.
+* **IFT** (Instruction Fine-Tuning) — процесс адаптации предварительно обученной языковой модели для выполнения определенных инструкций или задач, что позволяет улучшить её производительность при выполнении этих задач.
+* **IVF** (Inverted Index, or Inverted File) — структура данных, используемая при поиске информации, которая позволяет эффективно искать документы, содержащее определенные слова.
+* **IVFPQ** (IVF with Product Quantization) — представляет собой составной индекс, который объединяет инвертированный файловый индекс (IVF) и квантование продукта (PQ) для сокращения объема хранилища и повышения эффективности.
+* **Inference** — процесс получения прогнозов с помощью обученной модели. Проще говоря, это генерация текста моделью в режиме реального времени.
+* **Instructional Dataset** (instruct) — это тип набора данных, содержащий команды или инструкции для модели.
+* **LLM** (Large Language Model) — тип нейронной сети, предназначенный для понимания, генерации и обработки естественного языка (natural language) путём прогнозирования вероятности последовательностей слов.
+* **LangChain** — набор решений на Python для интеграции больших языковых моделей (LLM). Также существует реализация-обёртка для Node.js.
+* **LangGraph** — набор решений на Python для разработки рабочих процессов с использованием LLM. Рабочие процессы реализуются в виде графов. Является продолжением развития библиотеки LangChain. Существует обёртка на Node.js.
+* **Llama** (Large Language Model Meta AI, aka LLaMA) — это семейство авторегрессионных больших языковых моделей (LLM), выпускаемых компанией Meta AI с февраля 2023 года.
+* **Llama.cpp** — программное обеспечения с открытым исходным кодом для работы с большими языковыми моделями, такими как Llama.
+* **Min P** — метод выборки рассматривает возможность включения слов с вероятностью не менее `P`. Используется как дополнение к **Top K** и **Top P**.
+* **NLP** (Natural Language Processing) — область искусственного интеллекта, сосредоточенная на взаимодействии между компьютерами и людьми посредством естественного языка, что позволяет машинам понимать, интерпретировать и генерировать человеческие языки.
+* **PEFT** (Parameter-Efficient Fine-Tuning) — это метод адаптации предварительно обученных моделей с минимальными изменениями параметров модели, что делает тонкую настройку более эффективной и менее ресурсоёмкой.
+* **Padding** (PAD) — специальный токен для унификации длины последовательности в пакете. Большинство моделей требуют, чтобы размер текста в последовательности были одинакового размера, этот токен помогает решить эту проблему.
+* **Parallel Corpora** — это тип набора данных, содержащий записи на разных языках. Используется для обучения моделей машинного перевода.
+* **Parameters** (параметры) — переменные нейронной сети, которые задают поведение модели в процессе обучения.
+* **Perplexity** — единица измерения, которая показывает насколько хорошо языковая модель предсказывает. Чем ниже значение perplexity, тем лучше модель отражает заданный текст.
+* **Policy** — это стратегия агента, которая определяет, какие действия он выбирает в зависимости от состояния окружения (environment).
+* **Precision** — метрика, которая оценивает, какая доля всех объектов, классифицированных алгоритмом как положительные, на самом деле являются положительными.
+* **Prompt Engineering** — это процесс структурирования или создания инструкций с целью получения наилучшего результата от больших языковых моделей.
+* **Prompt Tuning** — подход к настройке поведения модели путем изменения текста подсказки.
+* **Prompt** — представляет входные данные - инструкцию, которая задаёт контекст и поведение модели.
+* **Quantization** — в языковых моделях это процесс ограничения округления чисел для уменьшения объёма потребляемой оперативной памяти. Чем меньше значение, тем быстрее работа, но тем менее точный результат.
+* **RAG** (Relative-Augmented Generation) — это метод, который предоставляет генеративным моделям искусственного интеллекта возможности поиска информации путем интеграции внешних систем поиска, улучшения их контекста и релевантности.
+* **Recall** — метрика, которая измеряет долю фактических положительных случаев, которые были правильно идентифицированы моделью.
+* **Reinforcement Learning Environment** (RL, Reinforcement Learning) — область машинного обучения, в которой агент учится взаимодействовать с окружающей средой (environment) для достижения определенной цели на основе обратной связи в виде вознаграждения.
+* **Reward** — обратная связь, которую агент получает после выполнения действия. Это может быть как положительное (для правильных действий), так и отрицательное (для неправильных действий) значение.
+* **RoBERTa** (A Robustly Optimized BERT Pre-training Approach) — тип большой языковой модели, улучшенная версия BERT, с более строгими и оптимизированными условиями обучения.
+* **RoPE** (Rotary Position Embedding) — метод добавления позиционной информации к последовательностям данных, используемый в моделях трансформаторов.
+* **SFT** (Supervised Fine-Tuning) — процесс адаптации предварительно обученной модели на основе маркированных данных с целью повышения её производительности для решения конкретных задач путем её точной настройки с помощью методов контролируемого обучения.
+* **Sampling** — используется для уменьшения объемов данных без потери информации.
+* **Separator** (SEP) - специальный токен для разделения фрагментов текста внутри одного примера. В какой-то степени, это можно назвать параграфом или абзацем.
+* **Supervised Learning Dataset** — учебный набор данных.
+* **T5** (Text-to-Text Transfer Transformer) — семейство больших языковых моделей от Google для преобразования текста в текст. Например, модель можно использовать для задач суммаризации, классификации, перевода с одного языка на другой и т.п.
+* **Temperature** — параметр, используемый при генерации текста для управления степенью разнообразия. Он корректирует распределение вероятностей возможных следующих слов: более низкие температуры делают модель более детерминированной и консервативной, в то время как более высокие температуры стимулируют разнообразие и креативность в результатах, делая менее вероятные прогнозы более вероятными. Не рекомендуется использовать значения `0.0` и `1.0`, поскольку результат может быть неожиданным.
+* **Text corpora** — большая коллекция текстовых данных, объединенных вместе, которая обычно используется для обучения моделей на ранних этапах их жизни.
+* **Token** (code, маркер, токен) — базовая единица ввода и вывода в языковой модели. Токен обычно представляет слово, часть слова или символ.
+* **Top K** — метод выборки ограничивает выборку прогнозируемых слов только наиболее вероятными вариантами из распределения. Чем меньше значение, тем хуже результат.
+* **Top P** (nucleus sampling) — метод выборки включает все слова с кумулятивной вероятностью, большей или равной заданному порогу `P`. Чем ниже значение, тем хуже результат.
+* **Transfer Learning** — обучение модели на основе предыдущего опыта.
+* **Transformer** — архитектура глубокого обучения, разработанная Google и основанная на механизме многоголового (multi-headed) внимания. Текст преобразуется в числовые представления, называемые токенами, а каждый токен преобразуется в вектор посредством поиска по таблице векторных представлений слов.
+* **Unknown** (UNK) — специальный токен, представляющий неизвестное или редко встречающееся слово. На практике, используется редко. Для моделей семейства Llama - `<unk>`.
+* **Vectorization** (векторизация) — процесс преобразования текста в числовые векторы, которые затем можно индексировать и использовать для быстрого поиска.
+* **Weight** (вес) — числовые коэффициенты, описывающие работу каждого нейрона в сети.

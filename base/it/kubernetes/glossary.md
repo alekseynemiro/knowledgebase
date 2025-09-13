@@ -1,15 +1,18 @@
 ---
-title: Glossary
-description: Glossary of Kubernetes-related terms.
+title: "Kubernetes: Глоссарий"
+description: Глоссарий терминов, связанных с Kubernetes.
 tags:
   - Glossary
   - Kubernetes
   - CI/CD
   - DevOps
+  - Глоссарий
+  - Развертывание
+  - Автоматизация
 ---
 
-# Glossary
+# Kubernetes: Глоссарий
 
-* **Deployment** - a deployment manages a set of Pods to run an application workload, usually one that doesn't maintain state.
-* **Pod** - a basic Kubernetes object that represents a group of one or more containers running on a single node and sharing a common namespace.
-* **Service** - an abstraction that provides network access to Pods within a Kubernetes cluster.
+* **Deployment** (развертывание) — управляет набором модулей (Pods) для запуска рабочей нагрузки приложения, которая, обычно, не сохраняет состояние.
+* **Pod** (модуль) — базовый объект Kubernetes, представляющий группу из одного или нескольких контейнеров, работающих на одном узле и использующих общее пространство имен.
+* **Service** (сервис) — абстракция, которая обеспечивает сетевой доступ к модулям (Pods) в кластере Kubernetes.

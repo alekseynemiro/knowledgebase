@@ -1,11 +1,12 @@
 ---
-title: Links
-description: Links to useful resources on Docker.
+title: "Docker: Ссылки"
+description: Полезные ссылки на ресурсы связанные с Docker.
 tag:
   - Links
+  - Ссылки
 ---
 
-# Links
+# Ссылки на ресурсы связанные с Docker
 
-* [Official website](https://www.docker.com)
-* [GitHub repo](https://github.com/moby/moby)
+* [Официальный сайт](https://www.docker.com)
+* [GitHub](https://github.com/moby/moby)

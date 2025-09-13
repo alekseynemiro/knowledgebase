@@ -1,5 +1,5 @@
 ---
-description: CLI for creating LLM servers.
+description: CLI для поднятия серверов LLM.
 tags:
   - llama.cpp
   - llama-cli
@@ -9,11 +9,14 @@ tags:
   - Machine Learning
   - AI
   - API
+  - ИИ
+  - Машинное обучение
+  - Большие языковые модели
 ---
 
 # llama-server
 
-The library lets you set up your server with a web interface. It's very easy:
+Библиотека **llama.cpp** позволяет легко развернуть сервер с веб-интерфейсом:
 
 ```bash
 llama-server -m "C:\models\Codestral-22B-v0.1-Q4_K_M.gguf" --port 8080
@@ -21,28 +24,30 @@ llama-server -m "C:\models\Codestral-22B-v0.1-Q4_K_M.gguf" --port 8080
 
 ![Hello llama-server!](assets/llama-server.png)
 
-## Multiple users
+## Многопользовательская поддержка
 
-For example `4` users with `4096 x 4 = 16 384` max context size:
+Например, `4` пользователя с максимальным окном контекста `4096 x 4 = 16 384`:
 
 ```bash
 llama-server -m phi-4-Q4_K_M.gguf -c 16384 -np 4 --port 8080
 ```
 
-## Embedding
+## Внедрение (embedding)
 
-Embedding vectorizes custom content for later use in models (RAG).
+Сервер можно запустить в режиме внедрения. В этом случае, сервер выполняет векторизацию данных.
 
-The following command shows how to start the server in embedding mode:
+Сервер внедрения можно использовать для **RAG** (**Relative-Augmented Generation**).
+
+В следующем примере показан вариант запуска сервера в режиме внедрения:
 
 ```bash
 llama-server -m "C:\models\phi-4-Q4_K_M.gguf" --embedding --pooling cls --ubatch-size 8192
 ```
 
-* `--pooling` - pooling type for embeddings:
-  * none - without pooling;
-  * mean - averaging of vector representations, this type is used most often;
-  * cls - a special token that is added to the beginning of each word for classification. Used in BERT and derived models. Optimal for QA (questions-answers) tasks;
-  * last - uses a vector representation of the last token or word from a sequence;
-  * rank - a method of ranking or selecting based on certain criteria.
-* `--ubatch-size` - maximum packet size in bytes (default: `512`). The optimal value is selected experimentally.
+* `--pooling` — задаёт тип группировки для внедрения:
+  * none — без объединения/группировки;
+  * mean — усреднение векторных представлений, этот тип используется чаще всего;
+  * cls — специальный токен, добавляемый в начало каждого слова для классификации. Используется в **BERT** и производных моделях. Оптимален для задач **QA** (вопросы-ответы);
+  * last — использует векторное представление последнего токена или слова из последовательности;
+  * rank — метод ранжирования или отбора на основе определенных критериев.
+* `--ubatch-size` — максимальный размер пакета в байтах (по умолчанию — `512`). Оптимальное значение подбирается экспериментально.

@@ -1,6 +1,6 @@
 ---
-title: How to...
-description: LangChain Questions and Answers in Python.
+title: "LangChain: Вопросы и ответы"
+description: Вопросы и ответы по LangChain на Python.
 tags:
   - LangChain
   - Python
@@ -8,18 +8,25 @@ tags:
   - Machine Learning
   - AI
   - FAQ
+  - Большие языковые модели
+  - Машинное обучение
+  - ИИ
 ---
 
-# LangChain How-to
+# LangChain: Вопросы и ответы
 
-## How to install LangChain?
+:::note
+Информация актуальна для **langchain v0.3.15** и **Python v3.13**.
+:::
+
+## Как установить LangChain?
 
 ```bash
 pip install llama-cpp-python
 pip install langchain langchain-community langchain-core
 ```
 
-## How to make a simple chat using LangChain?
+## Как создать простой чат с помощью LangChain?
 
 ```python
 from langchain_community.chat_models import ChatLlamaCpp
@@ -40,7 +47,7 @@ while True
     print(f"Assistant: {response.content}")
 ```
 
-## How to create prompt using LangChain?
+## Как добавить инструкцию (prompt) для модели в LangChain?
 
 ```python
 from langchain_community.chat_models import ChatLlamaCpp
@@ -79,24 +86,32 @@ while True:
     print(f"Assistant: {response.content}")
 ```
 
-## How to use local embedding with LangChain and llama.cpp server?
+## Как использовать локальное внедрение данных в LangChain с помощью сервера llama.cpp?
 
-OpenAI package is required:
+Использование **llama-server** — это простой и относительной дешёвый способ, в плане затрат ресурсов компьютера.
+
+Требуются пакеты **OpenAI** и **FAISS**:
 
 ```bash
-pip install openai
+pip install openai faiss-cpu
 ```
 
 :::note
-If you encounter an error: `module 'openai' has no attribute 'error'`
+Для **FAISS** существуют отдельные пакеты для **CPU** и **GPU**.
+:::
 
-Try using an older version of the OpenAI package:
+:::note
+Если возникает ошибка вида: `module 'openai' has no attribute 'error'`
+
+Попробуйте использовать более старую версию пакета OpenAI:
 
 ```bash
 pip install openai==0.28.1 --upgrade --force-reinstall --no-cache-dir
 ```
 
 :::
+
+Создайте или подготовьте файл с данными. Например, в текстовом формате:
 
 ```text title="data.txt"
 <s>Earth is the third planet from the Sun and the only astronomical object known to harbor life.
@@ -107,13 +122,13 @@ It has a public knowledge base that contains useful information on various topic
 <s>More detailed information about Aleksey Nemiro's activities can be found at https://www.nemiro.net</s>
 ```
 
-Run embedding server:
+Запустите севере внедрения (embedding server):
 
 ```bash
 llama-server -m "Meta-Llama-3.1-8B-Instruct-Q8_0.gguf" --embedding --pooling cls --port 8082
 ```
 
-Create and run script:
+Используйте следующий скрипт для запуска локальной модели с внедрением собственных данных:
 
 ```python
 import os
@@ -156,7 +171,7 @@ prompt = ChatPromptTemplate.from_messages(
 
 llm = ChatLlamaCpp(
     model_path="Meta-Llama-3.1-8B-Instruct-Q8_0.gguf",
-    # n_gpu_layers=32, # to use gpu
+    # n_gpu_layers=-1, # to use gpu
     # n_threads=6,
     verbose=False
 )
@@ -176,9 +191,9 @@ while True:
     print(f"Assistant: {answer}")
 ```
 
-## How to use local embedding with LangChain and Sentence Transformer?
+## Как использовать локальное локальное внедрение данных в LangChain с помощью Sentence Transformer?
 
-1\. Install **sentence-transformers**:
+1\. Установите пакет **sentence-transformers**:
 
 ```bash
 pip install sentence-transformers
@@ -186,7 +201,7 @@ pip install sentence-transformers
 
 2\. Download model [all-MiniLM-L6-v2](https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2).
 
-3\. Create custom embedding class:
+3\. Создайте класс производный от `Embeddings`:
 
 ```python
 from langchain_core.embeddings import Embeddings
@@ -211,7 +226,7 @@ class SentenceTransformerEmbeddings(Embeddings):
         return self.model.encode(text).tolist()
 ```
 
-4\. Use the custom embedding class:
+4\. Используйте созданный класс для внедрения:
 
 ```python
 embeddings = SentenceTransformerEmbeddings(
@@ -223,7 +238,7 @@ db = FAISS.from_documents(documents, embeddings)
 retriever = db.as_retriever()
 ```
 
-## How to use Qdrant?
+## Как использовать Qdrant?
 
 ```bash
 pip install langchain_qdrant
@@ -258,7 +273,7 @@ db = QdrantVectorStore(
 db.add_documents(documents)
 ```
 
-## How to load JSON Lines?
+## Как внедрить файл в формате JSON Lines?
 
 ```bash
 pip install jq
@@ -281,11 +296,11 @@ print(data)
 
 ![Result](assets\langchain.png)
 
-## How to create custom text splitter?
+## Как создать собственный класс для разделения текста (text splitter)?
 
-The following code shows an example of implementing a custom text splitter for LangChain.
+В следующем коде показан пример реализации пользовательского разделителя текста (text splitter) для **LangChain**.
 
-The code splits the text into `<s></s>` (bos + eos) tokens and runs it through `RecursiveCharacterTextSplitter`.
+Код разбивает текст по llama-токенам `<s></s>` (BOS + EOS) и пропускает его через `RecursiveCharacterTextSplitter`.
 
 ```python
 from langchain.text_splitter import RecursiveCharacterTextSplitter

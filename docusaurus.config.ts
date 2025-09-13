@@ -18,15 +18,15 @@ const config: Config = {
   onBrokenMarkdownLinks: 'warn',
 
   i18n: {
-    defaultLocale: 'en',
-    locales: ['en'],
+    defaultLocale: 'ru',
+    locales: ['ru', 'en'],
   },
 
   plugins:  [
     [
       require.resolve('docusaurus-lunr-search'),
       {
-        languages: ['en', 'ru'],
+        languages: ['ru', 'en'],
       },
     ],
     [
@@ -73,11 +73,10 @@ const config: Config = {
           label: 'GitHub',
           position: 'right',
         },
-        /* TODO: localization
         {
           type: 'localeDropdown',
           position: 'left',
-        },*/
+        },
       ],
     },
     footer: {

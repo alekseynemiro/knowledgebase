@@ -1,22 +1,26 @@
 ---
 slug: quickstart
-description: A quick way to get acquainted with LLMs.
+title: LLM - Быстрый старт
+description: Быстрый способ начать знакомство с большими языковыми моделями (LLM) и искусственным интеллектом.
 tags:
   - LLM
   - Machine Learning
   - AI
   - Step-by-Step
+  - ИИ
+  - Машинное обучение
+  - Большие языковые модели
 ---
 
-# Quickstart
+# LLM - Быстрый старт
 
-*Last Updated: 2025-01-25*
+*Обновлено: 2025-01-25*
 
-This document contains information to help you dive into the world of machine learning.
+Этот документ содержит информацию, которая поможет вам погрузиться в мир локальных больших языковых моделей (LLM).
 
-* [x] [GPT4All](gpt4all) - great solution for getting started with local large language models (LLMs), including the easy ability to use your own datasets.
-* [x] [LM Studio](https://lmstudio.ai/) - a slightly more complex solution, not bad as a next step in getting to know LLMs.
-* [x] [llama.cpp](llama-cpp) - great solution to start integrating LLMs (application development, automation, sharing).
-* [x] [FlowiseAI](flowise) - visual programming of LLMs, for those who are not familiar with Python.
-* [x] Embedding & RAG - keywords to help you integrate your own content into LLMs.
-* [x] Fine-Tuning - additional training of LLMs, essentially a technology for creating your own models based on existing ones. Requires a large amount of technical, human, and financial resources.
+* [x] **[GPT4All](gpt4all)** - неплохое решение для начала знакомства с большими языковыми моделями (LLM). Использует локальные модели и работает на слабом железе. Помимо прочего, позволяет легко внедрять собственные данные.
+* [x] **[LM Studio](https://lmstudio.ai/)** - продвинутый инструмент для работы с большими языковыми моделями.
+* [x] **[llama.cpp](llama-cpp)** - отличное решение для программной интеграции с LLM.
+* [x] **[FlowiseAI](flowise)** - визуальное программирование больших языковых моделей (LLM). Хороший старт для тех, кто не знаком с Python или вообще с программированием. Позволяет использовать как локальные, так и облачные модели.
+* [x] **Embedding & RAG** - ключевые слова, которые помогут понять, как интегрировать собственный контент в LLM.
+* [x] **Fine-Tuning** - подход для создания собственных моделей на основе существующих. Требует больших технических, человеческих и финансовых ресурсов.

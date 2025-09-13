@@ -8,41 +8,47 @@ tags:
   - LLM
   - Machine Learning
   - AI
+  - Большие языковые модели
+  - ИИ
 ---
 
 # :hugs: Hugging Face
 
-An American company that developed the Transformer architecture and actively promotes machine learning to the masses.
+**Hugging Face** — американская компания, разработавшая архитектуру Transformer и активно продвигающая машинное обучение в массы.
 
-The [huggingface.co](https://huggingface.co/) website contains much information on machine learning, datasets, models, etc.
+Является разработчиком портала [huggingface.co](https://huggingface.co/), который содержит много информации о машинном обучении, наборы данных, модели и т.д.
 
 ## huggingface-cli
 
-**huggingface-cli** is a command line interface for working with the [huggingface.co](https://huggingface.co/) website.
+**huggingface-cli** представляет собой интерфейс командной строки (CLI) для работы с [huggingface.co](https://huggingface.co/).
 
-1. Use the command line interface to install `huggingface-cli`:
+:::note
+Информация актуальна для **huggingface-cli v0.27.1**.
+:::
+
+1. Для установки модуля `huggingface-cli` выполните команду:
 
     ```bash
     pip install -U "huggingface_hub[cli]"
     ```
 
     :::note
-    Python is required, [download](https://www.python.org/downloads/) and install it if you don't have it already.
+    Необходим Python - https://www.python.org/downloads/
     :::
 
-2. Make sure the app is installed:
+2. Убедитесь, что приложение установлено:
 
     ```bash
     huggingface-cli --help
     ```
 
-3. Now you can, for example, download [phi-4-gguf](https://huggingface.co/microsoft/phi-4-gguf/tree/main) model:
+3. Если все нормально, можно использовать приложение. Например, можно скачать gguf-файл модель [phi-4-gguf](https://huggingface.co/microsoft/phi-4-gguf/tree/main):
 
     ```bash
     huggingface-cli download microsoft/phi-4-gguf phi-4-q4.gguf --local-dir "D:\Downloads"
     ```
 
-    or the entire repository:
+   или репозиторий модели целиком:
 
     ```bash
     huggingface-cli download microsoft/phi-4-gguf --local-dir "D:\Downloads"

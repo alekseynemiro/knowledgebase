@@ -16,12 +16,12 @@ const sidebars: SidebarsConfig = {
   main: [
     {
       type: 'doc',
-      label: 'Home',
+      label: 'Главная страница',
       id: 'index',
     },
     {
       type: 'category',
-      label: 'Information technology',
+      label: 'Информационные технологии',
       collapsible: true,
       collapsed: false,
       link: {
@@ -34,7 +34,7 @@ const sidebars: SidebarsConfig = {
         },
         {
           type: 'link',
-          label: 'Examples',
+          label: 'Примеры',
           href: 'https://github.com/alekseynemiro/knowledgebase/tree/master/examples',
         },
       ],
