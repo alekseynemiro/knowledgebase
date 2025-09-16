@@ -16,6 +16,7 @@ from langchain_community.chat_models import ChatLlamaCpp
 from langchain_deepseek import ChatDeepSeek
 from langchain_core.prompts import ChatPromptTemplate
 
+from _helpers import compute_file_hash
 from _markdown_splitter import MarkdownSplitter
 
 use_local = False
@@ -24,6 +25,7 @@ use_splitter = False
 current_dir = os.path.dirname(os.path.realpath(__file__))
 base_path = os.path.normpath(os.path.join(os.path.dirname(current_dir), "base"))
 base_output = os.path.normpath(os.path.join(os.path.dirname(current_dir), "i18n/en/docusaurus-plugin-content-docs/current"))
+cache_path = os.path.normpath(os.path.join(current_dir, ".cache"))
 
 print("This script will translate the knowledge base from Russian to English.")
 print(f"Source path: {base_path}")
@@ -114,11 +116,36 @@ files = glob(os.path.join(base_path, '**', '*.md'), recursive=True) + glob(os.pa
 
 print(f"{len(files)} files found.")
 
+os.makedirs(cache_path, exist_ok=True)
+
+"""
+# update cache for all files
+for file_path in files:
+    file_hash = compute_file_hash(file_path)
+    output_path = os.path.join(cache_path, file_path.replace(base_path, "").strip("\\/"))
+
+    os.makedirs(os.path.dirname(output_path), exist_ok=True)
+
+    with open(output_path, "w", encoding="utf-8") as writer:
+        writer.write(file_hash)
+"""
+
 # translate
 splitter = MarkdownSplitter()
 
 for file_path in files:
     print(f"Processing '{file_path}'...")
+
+    file_hash = compute_file_hash(file_path)
+    file_hash_path = os.path.join(cache_path, file_path.replace(base_path, "").strip("\\/"))
+
+    if os.path.exists(file_hash_path):
+        with open(file_hash_path, "r", encoding="utf-8") as reader:
+            cached_file_hash = reader.read().strip()
+
+        if cached_file_hash == file_hash:
+           print("Skip because file has not changed since last time.")
+           continue
 
     result_content = None
 
@@ -175,10 +202,12 @@ for file_path in files:
 
         # save
         output_path = os.path.join(base_output, file_path.replace(base_path, "").strip("\\/"))
-
         os.makedirs(os.path.dirname(output_path), exist_ok=True)
-
         with open(output_path, "w", encoding="utf-8") as writer:
             writer.write(result_content.strip() + "\n")
+
+        os.makedirs(os.path.dirname(file_hash_path), exist_ok=True)
+        with open(file_hash_path, "w", encoding="utf-8") as writer:
+            writer.write(file_hash)
 
     print(f"File '{file_path}' processing completed.")
