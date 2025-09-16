@@ -1,0 +1,14 @@
+{
+  "sidebar.main.doc.Главная страница": {
+    "message": "Home",
+    "description": "The label for category Главная страница in sidebar main"
+  },
+  "sidebar.main.category.Информационные технологии": {
+    "message": "Information Technology",
+    "description": "The label for category Информационные технологии in sidebar main"
+  },
+  "sidebar.main.link.Примеры": {
+    "message": "Examples",
+    "description": "The label for link Примеры in sidebar main, linking to https://github.com/alekseynemiro/knowledgebase/tree/master/examples"
+  }
+}

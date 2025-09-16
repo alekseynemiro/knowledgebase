@@ -1,0 +1,32 @@
+---
+title: "Python: Date & Time"
+description: Date and time operations in Python.
+tags:
+  - Python
+  - FAQ
+---
+
+# Python: Date & Time
+
+:::warning
+This document has been translated using machine translation without human review.
+:::
+
+## How to get date in JSON format (ISO 8601)?
+
+```python
+from datetime import datetime
+
+print(f"{datetime.now().strftime('%Y-%m-%dT%H:%M:%S.%f'}")
+```
+
+## How to convert seconds to TimeSpan?
+
+```python
+from datetime import timedelta
+
+seconds_value = 123
+timespan = str(timedelta(seconds=seconds_value))
+
+print(timespan)
+```
