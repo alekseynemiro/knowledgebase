@@ -21,7 +21,7 @@ _UpgradeReport_Files
 .vs/
 .idea/
 .vscode/
-.cache/**/*
+**/.cache/**/*
 
 # Misc
 .DS_Store
