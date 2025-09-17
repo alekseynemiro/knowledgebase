@@ -6,7 +6,7 @@ tags:
   - DevOps
 ---
 
-# GitHub Actions
+# GitHub: Actions
 
 ## Как развернуть в  GitHub Pages проект Node.js?
 

@@ -1,6 +1,6 @@
 ---
 slug: links
-title: GitHub Links
+title: "GitHub: Links"
 description: Ссылки на полезные ресурсы связанные с GitHub.
 tags:
   - GitHub

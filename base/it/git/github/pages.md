@@ -5,7 +5,7 @@ tags:
   - Step-by-Step
 ---
 
-# GitHub Pages
+# GitHub: Pages
 
 ## Как подключить собственный домен?
 
