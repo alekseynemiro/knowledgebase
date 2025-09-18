@@ -1,7 +1,6 @@
 ---
 slug: cli
-title: Kubernetes CLI
-description: Kubernetes command-line interface
+description: Kubernetes command-line interface.
 tags:
   - Kubernetes
   - CI/CD
