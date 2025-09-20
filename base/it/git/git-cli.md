@@ -11,71 +11,71 @@ tags:
 
 ## Как создать новый репозиторий в текущей папке?
 
-```bash
+```git
 git init
 ```
 
 ## Как привязать локальный репозиторий к удаленному?
 
-```bash
+```git
 git remote add origin https://git.exmple.org/repo.git
 ```
 
 ## Как клонировать/извлечь удаленный репозиторий?
 
-```bash title="Клонировать ветку master"
+```git title="Клонировать ветку master"
 git clone https://github.com/alekseynemiro/knowledgebase.git
 ```
 
-```bash title="Клонировать определенную ветку"
+```git title="Клонировать определенную ветку"
 git clone -b <branch_name> <repo_url>
 ```
 
 ## Как получить список веток из удаленного репозитория?
 
-```bash
+```git
 git fetch --all
 ```
 
 ## Как проверить статус текущей ветки?
 
-```bash
+```git
 git status
 ```
 
 ## Как отобразить название текущей ветки?
 
-```bash title="Имя текущей ветки"
+```git title="Имя текущей ветки"
 git branch --show-current
 ```
 
-```bash title="Список всех веток"
+```git title="Список всех веток"
 git branch
 ```
 
 ## Как создать новую ветку?
 
-```bash title="Создать новую ветку"
+```git title="Создать новую ветку"
 git branch <branch_name>
 ```
 
-```bash title="Создать новую ветку и переключиться на неё"
+```git title="Создать новую ветку и переключиться на неё"
 git checkout -b <branch_name>
 ```
 
 ## Как переключиться на ветку?
 
-```bash
+```git
 git checkout <branch_name>
 ```
 
 ## Как получить изменения из удаленного репозитория?
 
-```bash title="Из текущей ветки"
+```git title="Из текущей ветки"
 git pull
 ```
 
-```bash title="Из определённой ветки"
+```git title="Из определённой ветки"
 git pull origin <branch_name>
 ```
 
@@ -83,52 +83,52 @@ git pull origin <branch_name>
 
 В большинстве случаев достаточно просто зафиксировать все изменения:
 
-```bash title="Фиксация изменений"
+```git title="Фиксация изменений"
 git commit -m "Commit message"
 ```
 
 Если необходимо внести изменения в индекс:
 
-```bash title="Добавить файл или папку в индекс"
+```git title="Добавить файл или папку в индекс"
 git add <file_or_dir_path>
 ```
 
 * `<file_or_dir_path>` — допустимо использовать шаблон в формате wildcard. Например — `git add *.ts`.
 
-```bash title="Add all changes and ignore new files"
+```git title="Add all changes and ignore new files"
 git add -A .
 ```
 
 ## Как отправить изменения в удаленный репозиторий?
 
-```bash title="Отправить в текущую ветку"
+```git title="Отправить в текущую ветку"
 git push
 ```
 
-```bash title="Отправить в определённую ветку"
+```git title="Отправить в определённую ветку"
 git push origin <target_branch_name>
 ```
 
 Если целевая ветка не существует, она будет создана автоматически.  
 Для отслеживания ветки используйте флаг `--set-upstream` (`-u`):
 
-```bash
+```git
 git push --set-upstream origin <target_branch_name>
 ```
 
 Отправить изменения для всех веток и подключить отслеживание для этих веток:
 
-```bash
+```git
 git push --all --set-upstream origin
 ```
 
 ## Как удалить ветку?
 
-```bash title="Удалить локальную ветку"
+```git title="Удалить локальную ветку"
 git branch -d <branch_name>
 ```
 
-```bash title="Удалить удаленную ветку"
+```git title="Удалить удаленную ветку"
 git push -d origin <branch_name>
 ```
 
@@ -138,27 +138,27 @@ git push -d origin <branch_name>
 
 В следующих примерах показано создание метки для последней фиксации (последнего коммита):
 
-```bash title="Создать новую метку"
+```git title="Создать новую метку"
 git tag v1.0
 ```
 
-```bash title="Создать новую метку с сообщением"
+```git title="Создать новую метку с сообщением"
 git tag -a <tag_name> -m '<tag_message>'
 ```
 
 ## Как отправить метку (тег) на удаленный сервер?
 
-```bash title="Отправить метку v1.0"
+```git title="Отправить метку v1.0"
 git push origin tag v1.0
 ```
 
 ## Как удалить метку (тег)?
 
-```bash title="Удалить метку локально"
+```git title="Удалить метку локально"
 git tag -d <tag_name>
 ```
 
-```bash title="Удалить метку из удаленного репозитория"
+```git title="Удалить метку из удаленного репозитория"
 git push origin -d <tag_name>
 ```
 
@@ -166,7 +166,7 @@ git push origin -d <tag_name>
 
 Изменение имени тегов в **git** как такого нет. Есть обходной путь — создать новую метку со ссылкой на старую и затем удалить старую метку:
 
-```bash
+```git
 git tag new old
 git tag -d old
 git push origin new
@@ -175,7 +175,7 @@ git push origin -d old
 
 ## Как удалить из локального репозитория несуществующие в удалённом репозитории метки (теги)?
 
-```bash
+```git
 git fetch --prune-tags
 ```
 
@@ -187,16 +187,16 @@ git fetch --prune-tags
 
 Это может быть полезно для генерации номера версии.
 
-```bash
+```git
 git log -1 --pretty='%H;%aI;%D'
 ```
 
 ## Как проверить, имеет ли коммит подпись (gpg)?
 
-```bash
+```git
 git verify-commit <commit_hash>
 ```
 
-```bash
+```git
 git log --show-signature
 ```
