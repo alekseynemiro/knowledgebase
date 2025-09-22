@@ -26,6 +26,7 @@ const sidebars: SidebarsConfig = {
       collapsed: false,
       link: {
         type: 'generated-index',
+        slug: 'it',
       },
       items: [
         {
