@@ -36,6 +36,27 @@ var dic = new Dictionary<string, string>
 var dic = new Dictionary<string, int>(StringComparer.OrdinalIgnoreCase);
 ```
 
+## Как объединить два словаря?
+
+```csharp
+var dictionaryA = new Dictionary<string, string>
+{
+  { "key_1", "value_1" },
+  { "key_2", "value_2" },
+};
+
+var dictionaryB = new Dictionary<string, string>
+{
+  { "key_3", "value_3" },
+  { "key_4", "value_4" },
+};
+
+var merged = dictionaryA.Concat(dictionaryB).ToDictionary(x => x.Key, x => x.Value);
+
+Console.WriteLine(merged["key_1"]); // value_1
+Console.WriteLine(merged["key_4"]); // value_4
+```
+
 ## Что лучше Dictionary или Hashtable?
 
 В подавляющем большинстве случаев рекомендуется использовать `Dictionary<TKey, TValue>`.
