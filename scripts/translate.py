@@ -10,13 +10,11 @@ import os
 import multiprocessing
 import shutil
 
-from glob import glob
-
 from langchain_community.chat_models import ChatLlamaCpp
 from langchain_deepseek import ChatDeepSeek
 from langchain_core.prompts import ChatPromptTemplate
 
-from _helpers import compute_file_hash
+from _helpers import compute_file_hash, get_file_list
 from _markdown_splitter import MarkdownSplitter
 
 use_local = False
@@ -112,7 +110,7 @@ for item in os.listdir(base_output):
         os.remove(item_path)
 
 # prepare files list
-files = glob(os.path.join(base_path, '**', '*.md'), recursive=True) + glob(os.path.join(base_path, "**", "*.mdx"), recursive=True)
+files = get_file_list(base_path, [".md", ".mdx"])
 
 print(f"{len(files)} files found.")
 
