@@ -30,6 +30,12 @@ nmp ci
 3\. Run the project:
 
 ```bash
+npm run start-en
+```
+
+or start in Russian:
+
+```bash
 npm start
 ```
 
