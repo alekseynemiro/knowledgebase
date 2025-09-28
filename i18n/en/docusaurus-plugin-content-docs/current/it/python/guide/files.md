@@ -163,6 +163,13 @@ print(f"Current work directory: {os.getcwd()}")
 print(f"Current file directory: {os.path.dirname(os.path.realpath(__file__))}")
 ```
 
+## How to get the directory path from a file path?
+
+```python
+print(os.path.dirname("/home/aleksey/projects/test.py"))
+# output: /home/aleksey/projects
+```
+
 ## How to join path components?
 
 ```python
@@ -177,7 +184,7 @@ print(os.path.join("/home/user", "example.txt"))
 print(os.path.normpath("C:\\Projects/example/folder"))
 ```
 
-## How to get an absolute path from a relative one?
+## How to get an absolute path from a relative path?
 
 ```python
 import os

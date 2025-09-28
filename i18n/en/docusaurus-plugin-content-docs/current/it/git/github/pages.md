@@ -5,7 +5,7 @@ tags:
   - Step-by-Step
 ---
 
-# GitHub Pages
+# GitHub: Pages
 
 :::warning
 This document has been translated using machine translation without human review.
@@ -23,17 +23,17 @@ This document has been translated using machine translation without human review
     185.199.111.153
     ```
 
-    ![Example of an 'A' record](assets/dns-a-record-example.png)
+    ![Example of 'A' record](assets/dns-a-record-example.png)
 
     * Create a `CNAME` record targeting `username.github.io`.
 
-    ![Example of a 'CNAME' record](assets/dns-cname-record-example.png)
+    ![Example of 'CNAME' record](assets/dns-cname-record-example.png)
 
 2. Open Settings => Pages
    * Select a branch.
      ![Branch selection](assets/github-pages-select-branch.png)
-   * Add `CNAME` in the "Custom domain" section and click Save.
+   * Add `CNAME` to the "Custom domain" section and click Save.
    * Wait for the verification results.
-   * Enable the "Enforce HTTPS" option when it becomes available.
+   * Set the "Enforce HTTPS" option when it becomes available.
      ![Custom domain](assets/github-pages-custom-domain.png)
    * If the domain is unavailable for a long time (several hours), try removing it from **GitHub** and configuring it again.

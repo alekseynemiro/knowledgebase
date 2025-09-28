@@ -5,7 +5,7 @@ tags:
   - Emoji
 ---
 
-# GitHub Emoji
+# GitHub: Emoji
 
 :::warning
 This document has been translated using machine translation without human review.

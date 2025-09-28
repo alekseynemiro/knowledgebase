@@ -6,7 +6,7 @@ tags:
   - DevOps
 ---
 
-# GitHub Actions
+# GitHub: Actions
 
 :::warning
 This document has been translated using machine translation without human review.
