@@ -159,6 +159,13 @@ print(f"Current work directory: {os.getcwd()}")
 print(f"Current file directory: {os.path.dirname(os.path.realpath(__file__))}")
 ```
 
+## Как получить путь к каталогу из пути?
+
+```python
+print(os.path.dirname("/home/aleksey/projects/test.py"))
+# output: /home/aleksey/projects
+```
+
 ## Как объединить компоненты пути?
 
 ```python
