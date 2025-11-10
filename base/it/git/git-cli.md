@@ -238,3 +238,9 @@ git verify-commit <commit_hash>
 ```git
 git log --show-signature
 ```
+
+## Как получить список всех слияний (merge commits)?
+
+```git
+git log --merges --oneline --all
+```
