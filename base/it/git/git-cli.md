@@ -134,6 +134,44 @@ git push -d origin <branch_name>
 
 Для принудительного удаления можно использовать флаг `-f`.
 
+## Как восстановить удалённую ветку?
+
+Если ветка была объединена с основной веткой, то можно легко найти нужную фиксацию:
+
+```git
+$ git log --merges --oneline --all
+
+c58d979 Merge pull request #109 from alekseynemiro/MDSWTCH-108
+b166f35 Merge pull request #107 from alekseynemiro/MDSWTCH-106
+698a6ea Merge pull request #105 from alekseynemiro/MDSWTCH-104
+436435d Merge pull request #102 from alekseynemiro/MDSWTCH-97
+```
+
+С помощью команды `git show` можно получить хэши веток, которые участвовали в слиянии.
+
+В нижеследующем примере `13eeb27` - это ветка, в которую были влиты данные (обычно - `master`), а `05215eb` - вливаемая ветка (ветка, которую нужно восстановить).
+
+```git
+$ git show b166f35
+
+commit b166f3556519970b1a42b306aa459a465eb9790f
+Merge: 13eeb27 05215eb
+Author: Aleksey Nemiro <aleksey@kbyte.ru>
+Date:   Fri Oct 13 18:10:45 2023 +0300
+
+    Merge pull request #107 from alekseynemiro/MDSWTCH-106
+
+    106_to_v1.2: Cannot read property 'backdrop' of undefined
+```
+
+Чтобы восстановить ветку, достаточно создать её от найденного хэша.
+
+В следующем примере будет восстановлена ветка `MDSWTCH-106`:
+
+```git
+git checkout -b MDSWTCH-106 05215eb
+```
+
 ## Как создать метку (тег)?
 
 В следующих примерах показано создание метки для последней фиксации (последнего коммита):
