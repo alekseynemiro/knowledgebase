@@ -2,3 +2,5 @@ User-agent: *
 Disallow: /tags/
 Disallow: /en/tags/
 Allow: /
+
+Sitemap: https://kb.nemiro.net/sitemap.xml
