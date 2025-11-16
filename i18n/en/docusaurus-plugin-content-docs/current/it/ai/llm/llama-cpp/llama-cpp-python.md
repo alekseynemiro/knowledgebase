@@ -18,7 +18,7 @@ This document has been translated using machine translation without human review
 
 **llama-cpp-python** is a Python binding for the **[llama.cpp](./)** library.
 
-The package can be used directly as is, but it's better to use the **[LangChain](../langchain)** or **[LangGraph](../langgraph)** libraries.
+The package can be used directly as is, but it's better to use the **[LangChain](/it/ai/llm/langchain)** or **[LangGraph](/it/ai/llm/langgraph)** libraries.
 
 * [https://llama-cpp-python.readthedocs.io/](https://llama-cpp-python.readthedocs.io/)
 * [https://github.com/abetlen/llama-cpp-python](https://github.com/abetlen/llama-cpp-python)

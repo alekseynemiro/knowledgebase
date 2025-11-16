@@ -15,9 +15,9 @@ tags:
 
 # llama-cpp-python
 
-**llama-cpp-python** — это обёртка (bindings) библиотеки **[llama.cpp](./)** на **Python**.
+**llama-cpp-python** — это обёртка (bindings) библиотеки **[llama.cpp](/it/ai/llm/llama-cpp)** на **Python**.
 
-Пакет можно использовать напрямую как есть, но лучше воспользоваться библиотеками **[LangChain](../langchain)** или **[LangGraph](../langgraph)**.
+Пакет можно использовать напрямую как есть, но лучше воспользоваться библиотеками **[LangChain](/it/ai/llm/langchain)** или **[LangGraph](/it/ai/llm/langgraph)**.
 
 * [https://llama-cpp-python.readthedocs.io/](https://llama-cpp-python.readthedocs.io/)
 * [https://github.com/abetlen/llama-cpp-python](https://github.com/abetlen/llama-cpp-python)

@@ -40,7 +40,7 @@ This document has been translated using machine translation without human review
 
 In most cases, I prefer to specify each segment of the version number separately and then assemble the final number from these parts for different cases.
 
-This allows creating a separate file version number (`Version`/`FileVersion`) in the standard format `1.0.0.0`, a package version number (`PackageVersion`) in the [SemVer](../../development/versioning) format — `1.0.0-beta.1`. The assembly version number `AssemblyVersion` can be formed separately.
+This allows creating a separate file version number (`Version`/`FileVersion`) in the standard format `1.0.0.0`, a package version number (`PackageVersion`) in the [SemVer](/it/development/versioning) format — `1.0.0-beta.1`. The assembly version number `AssemblyVersion` can be formed separately.
 
 ```xml
 <Project>

@@ -22,11 +22,11 @@ tags:
 This document has been translated using machine translation without human review.
 :::
 
-There are two main areas of work with large language models (LLM): **[Inference](../llm/glossary.md)** (generation, inference) and **[Fine-Tuning](../llm/glossary.md)** (fine-tuning, training).
+There are two main areas of work with large language models (LLM): **[Inference](/it/ai/llm/glossary.md)** (generation, inference) and **[Fine-Tuning](/it/ai/llm/glossary.md)** (fine-tuning, training).
 
 If for generation (inference) the amount of resources affects the comfortable speed and accuracy of models more, then for **Fine-Tuning** the requirements are much higher, especially for **GPU**.
 
-[llama.cpp](../llm/llama-cpp) allows using the processor (**CPU**) and random access memory (**RAM**) if the resources of the graphics processing unit (**GPU**) are insufficient.
+[llama.cpp](/it/ai/llm/llama-cpp) allows using the processor (**CPU**) and random access memory (**RAM**) if the resources of the graphics processing unit (**GPU**) are insufficient.
 
 GPU is preferable to CPU. In all cases, the more resources, the better.
 
