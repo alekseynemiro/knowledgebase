@@ -13,6 +13,7 @@ const config: Config = {
   baseUrl: '/',
   organizationName: 'alekseynemiro',
   projectName: 'knowledgebase',
+  trailingSlash: false,
 
   onBrokenLinks: 'throw',
 
